@@ -1,0 +1,492 @@
+%Template for the AMS artcle style.
+
+%\usepackage{mathtools}
+%\usepackage{mathrsfs}
+
+
+%%
+%% This is LaTeX2e input.
+%%
+
+%% The following tells LaTeX that we are using the 
+%% style file amsart.cls (That is the AMS article style
+%%
+\documentclass[10pt]{amsart}
+
+
+\usepackage[margin=3cm]{geometry}
+\usepackage{color}
+%\usepackage{natbib}
+\usepackage{url, graphicx}
+\usepackage{amssymb, mathrsfs}
+
+%\usepackage{hyperref}
+%% This has a default type size 10pt.  Other options are 11pt and 12pt
+%% This are set by replacing the command above by
+%% \documentclass[11pt]{amsart}
+%%
+%% or
+%%
+%% \documentclass[12pt]{amsart}
+%%
+
+%%
+%% Some mathematical symbols are not included in the basic LaTeX
+%% package.  Uncommenting the following makes more commands
+%% available. 
+%%
+
+%\usepackage{amssymb}
+
+%%
+%% The following is commands are used for importing various types of
+%% grapics.
+%% 
+
+%\usepackage{epsfig}  		% For postscript
+%\usepackage{epic,eepic}       % For epic and eepic output from xfig
+
+%%
+%% The following is very useful in keeping track of labels while
+%% writing.  The variant   \usepackage[notcite]{showkeys}
+%% does not show the labels on the \cite commands.
+%% 
+
+%\usepackageshowkeys}
+
+
+%%%%
+%%%% The next few commands set up the theorem type environments.
+%%%% Here they are set up to be numbered section.number, but this can
+%%%% be changed.
+%%%%
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+
+%%
+%% If some other type is need, say conjectures, then it is constructed
+%% by editing and uncommenting the following.
+%%
+
+%\newtheorem{conj}[thm]{Conjecture} 
+
+
+%%% 
+%%% The following gives definition type environments (which only differ
+%%% from theorem type invironmants in the choices of fonts).  The
+%%% numbering is still tied to the theorem counter.
+%%% 
+
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{claim}{Claim}
+
+%%
+%% Again more of these can be added by uncommenting and editing the
+%% following. 
+%%
+
+%\newtheorem{note}[thm]{Note}
+
+
+%%% 
+%%% The following gives remark type environments (which only differ
+%%% from theorem type invironmants in the choices of fonts).  The
+%%% numbering is still tied to the theorem counter.
+%%% 
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[thm]{Remark}
+
+
+%%%
+%%% The following, if uncommented, numbers equations within sections.
+%%% 
+
+\numberwithin{equation}{section}
+
+
+%%%
+%%% The following show how to make definition (also called macros or
+%%% abbreviations).  For example to use get a bold face R for use to
+%%% name the real numbers the command is \mathbf{R}.  To save typing we
+%%% can abbreviate as
+
+\newcommand{\sB}{\mathscr B}
+\newcommand{\sC}{\mathscr C}
+\newcommand{\sD}{\mathscr D}
+\newcommand{\sE}{\mathscr E}
+\newcommand{\sF}{\mathscr F}
+\newcommand{\sG}{\mathscr G}
+
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cS}{\mathcal S}
+
+\newcommand{\fka}{\mathfrak a}
+\newcommand{\fkb}{\mathfrak b}
+\newcommand{\fkc}{\mathfrak c}
+\newcommand{\fkd}{\mathfrak d}
+\newcommand{\fke}{\mathfrak e}
+\newcommand{\fkf}{\mathfrak f}
+\newcommand{\fkl}{\mathfrak l}
+\newcommand{\fkm}{\mathfrak m}
+\newcommand{\fkn}{\mathfrak n}
+\newcommand{\fko}{\mathfrak o}
+\newcommand{\fkp}{\mathfrak p}
+\newcommand{\fkP}{\mathfrak{P}}
+
+
+\newcommand{\bbA}{\mathbb A}
+\newcommand{\bbB}{\mathbb B}
+\newcommand{\bbC}{\mathbb C}
+\newcommand{\bbD}{\mathbb D}
+\newcommand{\bbE}{\mathbb E}
+\newcommand{\bbF}{\mathbb F}
+\newcommand{\bbG}{\mathbb G}
+\newcommand{\bbH}{\mathbb H}
+\newcommand{\bbN}{\mathbb N}
+\newcommand{\bbP}{\mathbb P}
+\newcommand{\bbQ}{\mathbb Q}
+\newcommand{\bbR}{\mathbb R}
+\newcommand{\bbS}{\mathbb S}
+\newcommand{\bbT}{\mathbb T}
+\newcommand{\bbZ}{\mathbb Z}
+\DeclareMathOperator{\ad}{ad}
+
+
+
+\newcommand{\inv}{^{-1}}
+\newcommand{\ELL}{\cE\cL\cL}
+\newcommand{\artin}[2]{\left( \frac{#1}{#2}\right)}
+\newcommand{\twobytwo}[4]{\left(\begin{array}{cc} #1 & #2 \\ #3 & #4\end{array} \right)}
+
+
+%%
+%% The comment after the defintion is not required, but if you are
+%% working with someone they will likely thank you for explaining your
+%% definition.  
+%%
+%% Now add you own definitions:
+%%
+
+%%%
+%%% Mathematical operators (things like sin and cos which are used as
+%%% functions and have slightly different spacing when typeset than
+%%% variables are defined as follows:
+%%%
+
+\DeclareMathOperator{\Aut}{Aut} 
+\DeclareMathOperator{\Char}{char} 
+\DeclareMathOperator{\dist}{dist} % The distance.
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Frac}{Frac}  
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Hom}{Hom} 
+\DeclareMathOperator{\Image}{Image} 
+\DeclareMathOperator{\Mat}{Mat} 
+\DeclareMathOperator{\rank}{rank} 
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\tr}{tr} 
+\DeclareMathOperator{\trd}{trd} 
+\DeclareMathOperator{\nrd}{nrd} 
+\DeclareMathOperator{\red}{red} 
+
+%%
+%% This is the end of the preamble.
+%% 
+
+
+\begin{document}
+
+%%
+%% The title of the paper goes here.  Edit to your title.
+%%
+
+\title{Ado's Theorem}
+
+%%
+%% Now edit the following to give your name and address:
+%% 
+
+\author{Nicholas George Triantafillou}
+\address{Department of Mathematics, Massachusetts Institute of Technology, 
+Cambridge, Massachusetts, 02139}
+\email{ngtriant@mit.edu}
+%\urladdr{www.math.sc.edu/$\sim$howard} % Delete if not wanted.
+
+%%
+%% If there is another author uncomment and edit the following.
+%%
+
+%\author{Second Author}
+%\address{Department of Mathematics, University of South Carolina,
+%Columbia, SC 29208}
+%\email{second@math.sc.edu}
+%\urladdr{www.math.sc.edu/$\sim$second}
+
+%%
+%% If there are three of more authors they are added in the obvious
+%% way. 
+%%
+
+%%%
+%%% The following is for the abstract.  The abstract is optional and
+%%% if not used just delete, or comment out, the following.
+%%%
+
+\begin{abstract}
+The following is an expository paper on Ado's Theorem that every Lie algebra in characteristic zero is isomorphic to a subalgebra of a matrix algebra. This report was written for a final project of the Lie Algebras class given by Professor G. Lusztig at MIT in the Fall of 2015 and so assumes several results on the theory of Lie Algebras proved in the class or on the homeworks for the class. We mostly follow a mixture of the treatments by Tao \cite{Tao11} and Phillips \cite{Phillips10}, which in turn are based on the exposition in \cite{FultonHarris04} of a proof due to Harish-Chandra \cite{HarishChandra49}.
+%This work was completed while supported by an NSF Graduate Fellowship.
+\end{abstract}
+
+%%
+%%  LaTeX will not make the title for the paper unless told to do so.
+%%  This is done by uncommenting the following.
+%%
+
+ \maketitle
+
+%%
+%% LaTeX can automatically make a table of contents.  This is done by
+%% uncommenting the following:
+%%
+
+ %\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Throughout this paper, all Lie algebras and associative algebras are defined over a field $K$ of characteristic zero. Our goal is to prove the following theorem.
+
+\begin{thm}[Ado's Theorem] \label{thm:AdosTheorem}
+Let $L$ be a finite-dimensional Lie algebra (over $K$ of characteristic $0$). Then, $L$ has a faithful finite-dimensional representation.
+\end{thm}
+
+\begin{remark}
+Theorem \ref{thm:AdosTheorem} says that every finite-dimensional Lie algebra in characteristic zero is isomorphic to a sub Lie-algebra of some finite-dimensional matrix algebra.
+\end{remark}
+
+As a first attempt, consider the adjoint representation $\ad: L \to \hom_{\text{v.space}}(L,L)$ of $L$ on itself. If $L$ is a finite-dimensional representation, this is certainly finite-dimensional. Unfortunately, it is not faithful, since $\ad(\ell)(\ell')$ equals zero for all $\ell'$ if and only if $\ell \in Z(L)$, the center of $L$. Still, this should be encouraging - our first guess only fails on a relatively small set - the center of $L$.
+
+In the case that $L$ is abelian, the center $Z(L) = L$ is much easier to deal with. Consider the vector space $L \times K$ and the representation
+\begin{align} \label{specialrep}
+ \psi(\ell)(\ell',t) = (t\ell,0).
+\end{align}
+$\psi$ is a representation since
+\[
+\psi([\ell,\ell''])(\ell', t) = (0,0) = \psi(\ell)(t\ell'', 0) - \psi(\ell'')(t\ell, 0) = (\psi(\ell)\psi(\ell'') - \psi(\ell'')\psi(\ell))(\ell',t),
+\]
+and $\psi$ is clearly faithful. This simple construction fails for more complicated Lie algebras, but in the end, we will be able to use $\psi$ to build representations of progressive larger subalgebras of $L$ which remain faithful on $Z(L)$. Taking the direct sum of such a representation of $L$ with the adjoint representation yields a faithful representation of $L$.
+
+To prove Ado's Theorem, we will start with the representation $\psi$ of $Z(L)$ and inductively build representations of larger ideals of $L$. To make the induction work, it will be helpful to strengthen the inductive hypothesis somewhat. For simplicity of notation, we make the following definitions.
+
+\begin{definition}
+For $L$ a Lie algebra, $I\subset L$ an ideal, $A$ an associative algebra, we say a Lie algebra morphism $\rho: L \to A$ is \emph{nil} on $I$ if every element of $I$ is nilpotent as an element of the associative algebra $A$.\\
+Let $N$ be the ideal of all nilpotents of $L$. If $\rho$ is nil on $N$, we say that $\rho$ is a \emph{nilmorphism} or a \emph{nilrepresentation} (if $A \subset \End(V)$ for some $V$).
+\end{definition}
+
+We will use nilrepresentations of an ideal to produce nilrepresentations of the larger Lie algebra with kernel we understand. Our first result in this line is the following technical lemma, which will be particularly useful in the case where $I$ is nilpotent.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{lem} \label{lem:PowerOfIdealIsZero}
+ Let $L$ be a Lie algebra with (Lie algebra) ideal $I$. Let $A$ be an associative algebra which is finite-dimensional as a vector space and let $\rho: L \to A$ be a homomorphism of Lie algebras such that $\rho(L)$ generates $A$ as an associative algebra. Let $J$ be the two-sided (associative algebra) ideal of $A$ generated by $\rho(I)$. If $\rho$ is nil on $I$, then $J^{k} = \{0\}$ for some integer $k$.
+\end{lem}
+
+\begin{proof}
+Since $A$ is a finite-dimensional associative algebra, $A$ acts on itself by multiplication. $a \cdot 1 = a \neq a' = a' \cdot 1$ for $a \neq a' \in A$, this action is faithful. Thus, this action naturally identifies $A$ with its image in $\End_{\text{v. space}}(A)$. Hence, we may assume that $A$ is a subalgebra of $\End(V)$ for some finite-dimensional vector space $V$ over $K$. Then, we can also view the Lie algebras $\rho(I)$ and $\rho(L)$ as sub-Lie algebras of $\End(V)$.
+
+We now recall the following corollary to Engel's Theorem from the course notes (for a proof, see page five of \cite{Lusztig15.1}):
+\begin{prop} \label{prop:EngelCorollary}
+Let $L$ be a finite-dimensional Lie algebra, $V$ a finite-dimensional vector space and $\rho: L \to \End(V)$ a Lie algebra homomorphism which is nil on $L$. Then there is a complete flag $0 = V_0 \subset V_1 \subset \dots \subset V_k = V$ such that $\rho(l)V_i \subset V_{i-1}$ for all $\ell \in L, i \in [1,k]$.
+\end{prop}
+
+\begin{remark} \label{rem:WhatEngelMeans} 
+In our situation, Proposition \ref{prop:EngelCorollary} says that there is some $k (= \dim(V))$ such that for any $i_1, \dots, i_k \in I$, the product $\rho(i_1) \rho(i_2) \cdots \rho(i_k) = 0 \in \End(V)$. 
+\end{remark}
+
+Now, suppose that $x \in J^{k}$. Since $A$ is generated by $\rho(L)$ as a Lie algebra, $x$ can be written as a sum of elements of $A$ of the form $\rho(\ell_1)\rho(\ell_2) \cdots \rho(\ell_{n})$ where at least $k$ of the $n$ elements $\ell_1, \dots, \ell_n$ belong to $I$. 
+
+\begin{claim} \label{claim:ThingsAreZero}
+If $y = \rho(\ell_1)\rho(\ell_2) \cdots \rho(\ell_{n})$ where at least $k$ of the $n$ elements $\ell_1, \dots, \ell_n$ belong to $I$, then $y$ can be written as a sum of elements of the form $\rho(\ell_1')\rho(\ell_2') \cdots \rho(\ell_{n})$ where $\ell_1', \dots, \ell_{k}' \in I$. In particular, by Remark \ref{rem:WhatEngelMeans}, $y = 0$.
+\end{claim}
+
+Assuming the claim, any $x \in J^k$ is a sum of elements equal to $0$ and so $J^k = \{0\}$. So, it suffices to prove the claim. Given an expression $\rho(\ell_1)\rho(\ell_2) \cdots \rho(\ell_{n})$ associate the number $T = \sum_{i=1}^{n} 2^{n-i} f(\ell_{i})$, where $f(\ell) = \begin{cases} 0, & \text{ if } \ell \in I, \\
+1, & \text{ if } \ell \notin I. \end{cases}$ The proof is by double induction on $n$ and $T$. 
+
+The base cases $n = k$ and $T < 2^{n - k}$ hold trivially.
+
+Suppose that every expression with $n_0 < n$ and $T_0 < T$ can be written as a sum of terms of the desired form. Since $T > 2^{n-k}$, there is some $i \in [1,k]$ such that $\ell_i \in L\smallsetminus I$ and so there is some $i' \in [k+1, n]$ such that $\ell_{i'} \in I$. Then, there is some $j \in [1,n-1]$ such that $\ell_j \in L\smallsetminus I, \ell_{j+1} \in I$. Since $\rho$ is a Lie algebra homomorphism,
+\begin{align*}
+& \rho(\ell_1) \cdots \rho(\ell_{j-1}) \rho(\ell_j) \rho(\ell_{j+1}) \rho(\ell_{j+2}) \cdots \rho(\ell_{n}) \\
+ = & \rho(\ell_1) \cdots \rho(\ell_{j-1}) \rho([\ell_j, \ell_{j+1}]) \rho(\ell_{j+2}) \cdots \rho(\ell_{n}) + \rho(\ell_1) \cdots \rho(\ell_{j-1}) \rho(\ell_{j+1}) \rho(\ell_{j}) \rho(\ell_{j+2}) \cdots \rho(\ell_{n}).
+\end{align*}
+The $T$ value of the second term is less than the original term by $2^{n - j - 1}$, so it has the desired form by the induction on $T$.
+Since $I \subset L$ is a Lie algebra ideal and $\ell_{j+1} \in I$, $\ell_{j} \notin I$, we have that at least $k$ of $\ell_1, \dots, \ell_{j-1}, [\ell_j, \ell_{j+1}], \ell_{j+2}, \dots, \ell_{n}$ are in $I$. Therefore, the first term has the desired form by the induction on $n$. Hence, Claim \ref{claim:ThingsAreZero} holds, completing the proof of Lemma \ref{lem:PowerOfIdealIsZero}.
+\end{proof}
+
+
+Our first application of Lemma \ref{lem:PowerOfIdealIsZero} is the following corollary:
+
+\begin{cor} \label{prop:EngelCorollary2}
+Let $L$ be a finite-dimensional Lie algebra, $V$ a finite-dimensional vector space, $I$ an ideal of $L$ and $\rho: L \to \End(V)$ a Lie algebra homomorphism such that $\rho(i): V \to V$ is nilpotent for all $i \in I$. Then, $x = \rho(\ell_1) \cdots \rho(\ell_{n})$ is nilpotent if $\ell_{j} \in I$ for any $j \in [1,n]$.
+\end{cor}
+
+\begin{proof}
+Taking $A$ to be the associative ideal generated by $\rho(L)$, $x \in J$ in the notation of \ref{lem:PowerOfIdealIsZero}, so $x^{k} = 0$.
+%By Proposition \ref{prop:EngelCorollary} applied to the Lie algebra $I$, we see that if we define $W_{0} = \{0\}$ and $W_{t+1}$ to be the set of all $w \in V$ such that $\rho(i)w \in W_{t}$ for all $i \in I$, then $W_{k} = V$ for some $k$. By definition, it is clear that $\rho(I) W_{t} = W_{t-1}$. Now, if $\ell \in L$, I claim that $\rho(\ell)W_{t} \in W_{t}$ for all $t$. The proof is by induction on $t$. For $t = 0$, the claim is obvious. Otherwise, for any $i \in I$, 
+%\[
+%\rho(i) \rho(\ell) w = \rho(\ell)\rho(i) w + \rho([i,\ell]) w \in W_{t-1},
+%\]
+%since $\rho(i)w \in W_{t-1}$ and so $\rho(\ell)\rho(i) w \in W_{t-1}$ by the induction hypothesis, while $\rho([i,\ell])w \in W_{t-1}$ since $[i, \ell] \in I$. Now,by the definition of $W_{t}$, this implies that $\rho(\ell) w \in W_{t}$, which completes the induction step.
+
+%Then, $x W_{t} \subset W_{t-1}$ for each $t \in [1,k]$, so $x$ is nilpotent.
+\end{proof}
+
+This implies the following corollary:
+\begin{cor} \label{cor:EngelCorollary3}
+Let $L$ be a finite-dimensional Lie algebra, $V$ a finite-dimensional vector space, $I,J$ ideals of $L$ with $I \subset [J,L]$. Let $\rho: L \to \End(V)$ a Lie algebra homomorphism. Then, $\rho$ is nil on $[I,J]$ if and only if $\rho$ is nil on $I$.
+\end{cor}
+\begin{proof}
+Suppose $\rho$ is nil on $[I,J]$ and let $i \in I$ be arbitrary. Since we are working in characteristic zero, a linear map $\phi: V \to V$ is nilpotent if and only if $\tr(\phi)^k = 0$ for all $k \geq 1$. Since $I \subset [J,L]$ we can write $\rho(i)^{k}$ as a sum of element of the form $(\rho(j)\rho(\ell) - \rho(\ell) \rho(j))\rho(i)^{k-1}$, so it suffices to check that all such terms have trace zero. The trace of a product of matrices is invariant under cyclic permutation, so
+\begin{align*}
+\tr((\rho(j)\rho(\ell) - \rho(\ell) \rho(j))\rho(i)^{k-1}) & = 
+\tr(\rho(i)^{k-1}\rho(j)\rho(\ell) - \rho(j)\rho(i)^{k-1}\rho(\ell)) \\
+& = \sum_{t=1}^{k-1}\tr(\rho(i)^{k-1 - t}\rho([i,j])\rho(i)^{t-1}\rho(\ell)) = 0,
+\end{align*}
+since each term in the sum is nilpotent by Corollary \ref{prop:EngelCorollary2}, and therefore has trace zero. Thus $\rho(i)$ is nilpotent. Of course, the other direction is trivial.
+\end{proof}
+
+\begin{thm} \label{thm:NilpotentIdeal}
+Let $L$ be a finite-dimensional Lie algebra and let $S \subset L$ be a solvable ideal of $L$. Then, $[L,L] \cap S$ is a nilpotent ideal of $L$.
+\end{thm}
+
+\begin{proof}
+The proof is by induction on the length of the derived series of $S$. If $S = 0$, the claim is trivial. Otherwise, we may assume that the $L$-ideal $[L,L] \cap [S,S] = [S,S]$ is nilpotent. In other words, $\ad(x)$ is nilpotent for all $x \in [L,L] \cap [S,S]$. Now, $[[L,L]\cap S, S] \subset [L,L] \cap [S,S]$, so Corollary \ref{cor:EngelCorollary3} with $\rho = \ad$, $J = S$ and  $I = [L,L] \cap S \subset [L,S]$ gives that $\ad(x)$ is nilpotent for all $x \in [L,L] \cap S$, as desired. Thus, $[L,L]\cap S$ is nilpotent as a Lie algebra ideal.
+\end{proof}
+
+\begin{remark} \label{rem:InnerDerivation}
+Theorem \ref{thm:NilpotentIdeal} immediately implies if $s \in S$ is an element of some solvable ideal of $L$ and $\ell \in L$, then $[\ell,s]$ is nilpotent as an element of $L$. 
+\end{remark}
+
+In fact, we can say more.
+\begin{cor} \label{cor:AllDerivations}
+Let $L$ be a finite-dimensional Lie algebra, let $D:L \to L$ be a derivation. Let $S$ be a solvable ideal of $L$. Then, $D(S)$ is a nilpotent ideal.
+\end{cor}
+
+\begin{proof}
+Consider the Lie algebra $L' := L \times K$ as a vector space with bracket given by $[(\ell_1, t_1), (\ell_2, t_2)] = ([\ell_1, \ell_2] + t_1 D(\ell_2) - t_2 D(\ell_1), 0)$. It is easy to see that this bracket is antisymmetric and that the Jacobi identity holds since summing
+\[
+[[(\ell_1,t_1), (\ell_2,t_2)],(\ell_3,t_3)] = ([[\ell_1, \ell_2], \ell_3] + t_1[D\ell_2, \ell_3] + t_2[\ell_3, D\ell_1] - t_3[D\ell_1, \ell_2] - t_3[\ell_1, D\ell_2], 0)
+\]
+over cyclic shifts of the indices clearly gives zero. It is also clear that $L = L \times \{0\}$ is a subalgebra containing $[L', L']$ and so if $S \subset L$ is a solvable ideal of $L$, $S$ is also a solvable ideal of $L'$. Then, by Remark \ref{rem:InnerDerivation}, $[\{0\} \times K, S] = [(0,1),S] = D(S)$ is a nilpotent ideal of $L$.
+\end{proof}
+
+The following Proposition allows us to replace nilrepresentations of a solvable Lie algebra with different nilrepresentations that can be ``extended'' by a derivation. To state the proposition, we first recall from part (g) of the lemma in \cite{Lusztig15.5} that if $\iota: L \to U$ is the canonical embedding of a lie algebra into its universal enveloping algebra and $D: L \to L$ is a derivation, then there is a unique derivation $D': U \to U$ such that $D' \iota = \iota D$.
+
+\begin{prop} \label{prop:DealWithSolvableCase}
+Let $S$ be a solvable Lie algebra with universal enveloping algebra $U$ and let $\rho: U \to \End(V)$ be a finite-dimensional representation such that $\rho\circ \iota: S \to \End(V)$ is a nilrepresentation. Then, $U$ has an ideal $I \subset \ker(\rho)$ such that \\
+(1) $U/I$ is finite-dimensional,  \\
+(2) The composition $S \hookrightarrow U \to U/I$ is a nilmorphism of Lie algebras, and \\
+(3) If $D'$ is a derivation of $U$ induced by a derivation of $S$, then $D(I)\subset I$.
+\end{prop}
+
+\begin{proof}
+Let $J$ be the two-sided associative algebra ideal of $U$ generated by $\ker(\rho)$ and the nilpotent element of $S$. Then, $\rho(J) \subset \rho(U)$ is an ideal of $\rho(U)$ generated by the images of the nilpotent elements of $S$. Applying Lemma \ref{lem:PowerOfIdealIsZero} to the representation $\rho\circ\iota$ of $S$, we see that $\rho(J)^k = \rho(J^k) = 0$ for some $k$. In particular, $J^{k} \subset \ker(\rho)$. I claim that the ideal $I = J^k$ satisfies (1), (2), and (3).
+
+For (1), note that $J \supset \ker(\rho)$, so $U/J$ has finite-dimension $n$. Then, for a basis $s_1,\dots, s_{d}$ of $S$, the image of multipication by $s_{t}$ in $U/J$ is a matrix which must satisfy its own characteristic polynomial by Cayley-Hamilton. Thus, for each $t \in [1,d]$ there is a monic polynomial $f_t$ of degree $n$ with complex coefficients such that $f_t(\iota(s_t)) \in J$. Then, $f_t(\iota(s_t))^{k} \in J^{k}$. Now, by the PBW theorem, the $\iota(s_{1})^{\alpha_{1}} \cdots \iota(s_{d})^{\alpha_{d}}$ form a basis for $U$. It follows that every element of $U/J^{k}$ has a representative which is a linear combination of the monomials $\iota(s_{1})^{\alpha_{1}} \cdots \iota(s_{d})^{\alpha_{d}}$ with all of the $\alpha_{i} \in [1,nk]$. In particular, $U/I$ is finite-dimensional.
+
+For (2), if $s \in S$ is nilpotent, then $\iota(s) \in J$, by construction, so $\iota(s)^{k} \in J^{k}= I$, so the image of $\iota(s)$ in $U/I$ is also nilpotent.
+
+For (3), by corollary \ref{cor:AllDerivations}, if $D$ is the derivation of $S$ inducing $D'$, the solvability of $S$ implies that $D(S)$ is a nilpotent ideal of $S$. In particular, for any $s \in S$, we have $D' \circ\iota(s) \in J$ by construction. Now $D'$ is a derivation and the $\iota(s)$ generate $U$, so by the Leibniz rule, $D'(U) \in J$. Applying the Leibniz rule again, this time to $k$-fold products of elements of $J$, we see $D'(I) = D'(J^{k}) \subset J^{k} = I$.
+\end{proof}
+
+We now have all the tools we need to prove a key lemma for constructing nilrepresentations of Lie algebras from nilrepresentations of solvable ideals.
+
+\begin{lem} \label{lem:InductionLemma}
+Suppose $L$ is a Lie algebra with a vector space decomposition $L = S \oplus L'$ where $S$ is a solvable ideal and $L'$ is a Lie subalgebra. Given a finite-dimensional nilrepresentation $\rho$ of $S$, there is a finite-dimensional representation $\sigma$ of $L$ such that $S \cap \ker(\sigma) \subset \ker(\rho)$. Moreover, if $L$ is nilpotent or if $L$ and $S$ have the same maximal nilpotent ideals, then there is a finite-dimensional \emph{nil}representation $\sigma$ of $L$ such that $S \cap \ker(\sigma) \subset \ker(\rho)$.
+\end{lem}
+
+\begin{proof} Let $U$ be the universal enveloping algebra of $S$.
+$\rho$ satisfies the conditions of Proposition \ref{prop:DealWithSolvableCase}, so there is a (two-sided) ideal $I$ of $U$ with properties (1), (2), and (3) of Proposition \ref{prop:DealWithSolvableCase}. Since $S$ is an ideal, $\ell' \in L'$ gives a derivation $D_{\ell'}$ on $U$ by lifting the adjoint action. By condition (3), $D_{\ell'}(I) \subset I$. For $s \in S$, let $m_{s}$ be the multiplication by $s$ map. Clearly $m_{s}(I) \subset I$. Hence, given $\ell = s + \ell' \in L$, the map $\phi_{\ell} = m_{s} + D_{\ell'}: U \to U$, preserves $I$ and therefore descends to a map $\phi_{\ell}: U/I \to U/I$. Now, $(D_{\ell'} m_s - m_s D_{\ell'}) u = (D_{\ell'}s) u  = m_{[\ell',s]} u$, $m_{s_1} m_{s_2} - m_{s_2} m_{s_1}  = m_{[s_1,s_2]}$ and $D_{\ell'_1} D_{\ell'_2} - D_{\ell'_2}D_{\ell'_1} = D_{[\ell'_1, \ell'_2]}$ by the Jacobi identity, so 
+\[
+\phi_{[s_1 + \ell'_1, s_2 +\ell'_2]} = \phi_{s_1 + \ell'_1} \phi_{s_2 + \ell'_2} - \phi_{s_2 + \ell'_2} \phi_{s_1 + \ell'_1}.
+\]
+Thus, $\sigma: L \to \text{Aut}(U/I), \ell \mapsto \phi_{\ell}$ is a finite-dimensional representation of $L$.
+
+Now, suppose $s \in S \cap \ker(\sigma)$. Then, $\phi_{s} = m_{s}$ is $0$ on $U/I$. In particular, $s \cdot 1 = 0$, so $s \in I \subset \ker(\rho)$.
+
+We are left to check what $\sigma$ does to nilpotents. If $n \in S$ is nilpotent as an element of $L$ (and therefore as an element of $S$), the image of $n$ in $U/I$ is nilpotent by condition (2). Since $n \in S$, $\sigma(n) = m_{n}$ is nilpotent as well. 
+
+If $L$ and $S$ have the same nilpotents, this implies that $\sigma$ is a nilrepresentation.
+
+If $L$ is nilpotent, $\sigma(s)$ is nilpotent for all $s \in S$ by condition (2). In particular, by Lemma \ref{lem:PowerOfIdealIsZero}, if $J$ is the two-sided algebra ideal generated by $\sigma(s)$, there is some $k$ such that $J^{k} = 0$. Also, since $\ell' \in L'$ is nilpotent, $D_{\ell'} = \ad_{\ell'}|_{S}: S \to S$ is nilpotent as a derivation of $S$, so $D_{\ell}^{t} = 0$. Since $U/I$ is finite-dimensional and generated by $\iota(S)$, $(D'_{\ell'})^{h} = 0$ as an operator on $U/I$ for some $h \in \bbZ_{>0}$. Thus, expanding $\sigma(n + \ell')^{hk} = (m_n + D'_{\ell'})^{hk}$, every term either contains at least $k$ total copies of $m_{n}$ (in which case it belongs to $J^{k} = 0$ or $h$ consecutive copies of $D'_{\ell'}$ in which case it is again $0$. Thus, $\sigma(n + \ell')$ is nilpotent for all $n \in S$ and all $\ell' \in L'$, i.e. $\sigma(\ell)$ is nilpotent for all $\ell \in L$.
+\end{proof}
+
+Before proving Ado's Theorem, we need to cite one further result, due to Levi, which we state without proof.
+
+\begin{thm}[Levi's Theorem] \label{thm:LevisTheorem}
+If $L$ is a finite dimensional Lie algebra (over $K$ of characteristic $0$), and $R$ is the radical of $L$ (the maximal solvable ideal), then there exists a subalgebra $L'$ of $L$ such that $L = R \oplus L'$.
+\end{thm}
+
+Finally, Ado's Theorem follows by a simple induction.
+
+\begin{proof}[Proof of Ado's Theorem]
+Let $Z(L)$ be the center of $L$, let $R$ be the radical of $L$ and let $N$ be the largest nilpotent ideal of $L$. Then, there is an increasing sequence of ideals $I_0 \subset \cdots \subset I_{t}$ of $L$ with $\dim(I_{t'}) - \dim(I_{t'-1}) = 1$ for all $t' \in [1,t]$ such that $I_0 = Z(L)$, $I_{t_1} = N$ for some $t_1 \in [1,t]$ and $I_t = R$. Then, $I_{t'+1} = I_{t'} \oplus K$ for any one dimensional sub-algebra $K$ of $I_{t'+1}$ which is not contained in $I_{t'}$. Also, by Levi's theorem, $L = R \oplus L'$ for some subalgebra $L'$ of $L$. For convenience, denote $I_{t+1} = L$.
+
+Suppose $\rho$ is a nilrepresentation of $Z(L)$. Then, using Lemma \ref{lem:InductionLemma} to induct on $t$, applying the case that $L$ is nilpotent when $t \leq t_{1}$ and then applying the case that $L$ and $S$ have the same maximal nilpotent ideals when $t > t_1$, we see that there is a finite-dimensional representation $\sigma$ of $L$ such that $\ker(\sigma) \cap Z(L) = \ker(\rho)$.
+
+In particular, if we take $\rho = \psi$ (as defined in \eqref{specialrep}), we see that the representation $\sigma \oplus \ad$ of $L$ is faithful, since $\ker(\sigma \oplus \ad) = \ker(\sigma) \cap \ker(\ad) = \ker(\sigma) \cap Z(L) = \ker(\psi) = 0$, while finite-dimensionality is obvious since both $\sigma$ and $\ad$ are finite dimensional representations. 
+\end{proof}
+
+\begin{remark}
+While we set out to prove Ado's theorem, we actually proved something slightly stronger. We showed that every finite-dimensional Lie algebras has a faithful finite-dimensional \emph{nil}representation.
+\end{remark}
+
+\begin{remark}
+The analogue of Ado's Theorem holds over all fields. The case of positive characteristic is due to Iwasawa, but is beyond the scope of this essay. Our proof uses the fact that the characteristic is zero in the use of Levi's Theorem and in the characterization of nilpotent matrices as having all powers with trace zero.
+\end{remark}
+
+%\nocite{SilvermanAEC}
+%\nocite{SilvermanATAEC}
+%\nocite{CoxPrimes}
+%\nocite{LangEF}
+%\nocite{SutherlandLN}
+%\nocite{SutherlandIV}
+
+%\appendix
+%\section{Derivations, Solvable Ideals, and Nilpotent Ideals}
+
+%We now give complete proofs of some results about the interaction between derivations, solvable ideals and nilpotent ideals. The results of this section are fairly standard and could probably be omitted, but I wasn't satisfied by the treatment they were given in my references, so they are included as an appendix.
+
+
+
+
+\bibliographystyle{alpha} %plain} %alpha
+\bibliography{TriantafillouLieAlgebrasFinalProject}
+
+
+\end{document}
+
+
+
+
+
+

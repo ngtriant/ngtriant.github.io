@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+<!--    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.css">
+    <script type="text/javascript"
+    src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.js"></script> -->
+
+
+    <!--Mathjax-->
+ <!--   <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>  -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Nicholas Triantafillou">
+    <meta name="keywords" content="Nicholas Triantafillou">
+    <meta name="description" content="Nicholas Triantafillou's Homepage">
+
+    <!-- Note there is no responsive meta tag here -->
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Nicholas Triantafillou's Research Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/non-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,500|Open+Sans:300,400,600,700,800|Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Nicholas Triantafillou</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="research.html">research</a></li>
+            <li><a href="notes.html">exposition</a></li>
+            <li><a href="teaching.html">teaching</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h2>research interests</h2>
+
+      <p>
+        My research interests are in arithmetic geometry, computational number theory, and sphere packing.
+        I have also worked on connections between analytic number theory and random matrix theory and in combinatorics.
+      </p>
+
+      <p>
+	See also my pages
+	at <a href="https://arxiv.org/a/triantafillou_n_1.html">arXiv</a> and <a href="https://scholar.google.ca/citations?user=3IUE2yQAAAAJ">Google
+	Scholar Citations</a>.
+      </p>
+
+      <h2>mathematics research papers</h2>
+
+      <p><b>Restriction of Scalars, the Chabauty-Coleman Method, and  \(\mathbb P^1 \smallsetminus \{0, 1, \infty\}\)</b>, Ph.D. Thesis (2019). (<a href="https://math.mit.edu/~ngtriant/papers/Triantafillou-Thesis_Final.pdf">pdf</a>)
+<span class="abs-non"><br/>
+<span class="abstract">
+We extend Siksek's development of Chabauty's method for computing the set of $S$-integral points on restrictions of scalars of curves over \(\mathcal O_{K,S}\) to curves which are not necessarily complete. When the curve is \(\mathcal C = \mathbb P^1 \smallsetminus \{0, 1, \infty\}\), we show that after replacing the curve with a suitable descent set of covers, the method has no base change obstructions. We also use the method to prove that \( \mathcal C(\mathcal O_{K}) \) is finite for several classes of fields \( K \), including that \( \mathcal C(\mathcal O_{K}) = \emptyset \) when 3 splits completely in \(K\). This represents the first infinite class of cases where Chabauty's method for restrictions of scalars is proved to show that \( \mathcal C(\mathcal O_{K}) \) is finite where the classical Chabauty's method cannot.
+	  </span>
+	</span>
+      </p>
+
+<p><b>Dual linear programming bounds for sphere packing via modular forms</b>, (with <a href="http://math.mit.edu/~cohn/">Henry Cohn</a>). Preprint under revision. Coming soon.
+</p>
+
+      <p><b>Computing zeta Functions of cyclic covers in large characteristic</b>, (with <a href="http://math.mit.edu/~varul/">Vishal Arul</a>, <a href="https://alexjbest.github.io/">Alex J. Best</a>, <a href="https://math.mit.edu/~edgarc/">Edgar Costa</a>, and <a href="http://math.bu.edu/people/rmagner/">Richard Magner</a>) to appear in Proceedings of ANTS XIII (2018). (<a href="https://arxiv.org/abs/1806.02262.pdf">pdf</a>) (<a href="https://arxiv.org/abs/1806.02262">arXiv</a>)
+	<span class="abs-non"><br/>
+<span class="abstract">
+We describe an algorithm to compute the zeta function of a cyclic cover of the projective line over a finite field of characteristic \(p\) that runs in time \(p^{1/2+o(1)}.\)
+We confirm its practicality and effectiveness by reporting on the performance of our SageMath implementation on a range of examples.
+The algorithm relies on Gon\c{c}alves's generalization of Kedlaya's algorithm for cyclic covers, and Harvey's work on Kedlaya's algorithm for large characteristic. 
+	  </span>
+	</span></p>
+
+
+      <p><b>Distribution of eigenvalues of weighted, structured matrix ensembles</b>, (with <a href="http://www.mathcs.emory.edu/~obeckwi/">O. Beckwith</a>, V. Luo,  <a href="https://web.williams.edu/Mathematics/sjmiller/public_html/williams/welcome.html">S. J. Miller</a>, K. Shen) INTEGERS (2015). (<a href="http://arxiv.org/pdf/1112.3719.pdf">pdf</a>) (<a href="http://arxiv.org/pdf/1112.3719">arXiv</a>) (<a href="http://www.integers-ejcnt.org/vol15.html">journal</a>)
+	<span class="abs-non"><br/>
+	  <span class="abstract">
+	    Given a structured random matrix ensemble where each random variable
+	    occurs o(N) times in each row and the limiting rescaled spectral
+	    measure exists, we fix a \(p \in [1/2,1]\) and study the ensemble of signed
+	    structured matrices by multiplying the \((i,j)\)th and \((j,i)\)th entries of
+	    a matrix by a randomly chosen \(\varepsilon(i,j) \in {1,-1}\), with
+	    Prob\((\epsilon(i,j)) = p\) (i.e., the Hadamard product.) For \(p = 1/2\)
+	    the limiting signed rescaled spectral measure is the semi-circle; for
+	    other \(p\) it has bounded (resp., unbounded) support if the limiting
+	    rescaled spectral measure has bounded (resp., unbounded) support, and 
+	    converges to the limitin rescaled spectral measure as \(p \to 1\). The
+	    proofs are by Markov's Method of Moments, and involve the pairings of
+	    \(2k\) vertices on a circle. The contribution of each pairing in the 
+	    signed case is weighted by a factor depending on p and the number of 
+	    vertices involved in at least one crossing. These numbers are of 
+	    interest in their own right, appearing in problems in combinatorics
+	    and knot theory. The number of configurations with no vertices 
+	    involved in a crossing is well-studied (the Catalan numbes). We
+	    discover and prove similar formulas for other configurations.
+	  </span>
+	</span></p>
+
+
+      <p><b>Sharp threshold asymptotics for the emergence of additive bases</b> (with <a href="http://faculty.etsu.edu/godbolea/">A. Godbole</a>,
+      <a href="http://math.uchicago.edu/people/grad-students/">C. M. Lim</a>, <a href="http://www.ams.jhu.edu/~lyzinski/">V. Lyzinski</a>), INTEGERS (2013). (<a href="https://arxiv.org/abs/1110.1745">pdf</a>) (<a href="https://arxiv.org/abs/1110.1745">arXiv</a>) (<a href="http://www.integers-ejcnt.org/vol13.html">journal</a>)
+	<span class="abs-non"><br/>
+	  <span class="abstract">
+	    A subset \(\mathcal A\) of \(\{0,1,...,n\}\) is said to be a 2-additive basis for \(\{1,2,...,n\}\) if each \(j \in \{1,2,...,n\}\) can be written as \(j=x+y, x,y \in \mathcal A, x \leq y\). If we pick each integer in \(\{0,1,...,n\}\) independently with probability \(p=p_n\) tending to \(0\), thus getting a random set \(\mathcal A\), what is the probability that we have obtained a 2-additive basis? We address this question when the target sum-set is \([(1-\alpha)n, (1+\alpha)n]\) (or equivalently \([\alpha n, (2-\alpha) n])\) for some \(0 < \alpha < 1\). Under either model, the Stein-Chen method of Poisson approximation is used, in conjunction with Janson's inequalities, to tease out a very sharp threshold for the emergence of a 2-additive basis. Generalizations to \(k\)-additive bases are then given. 
+	  </span>
+	</span></p>
+
+
+      <p><b>Omnimosaics</b>, (with <a href="https://verbaltopology.wordpress.com/">J. Banks</a>, <a href="http://faculty.etsu.edu/godbolea/">A. Godbole</a>) Preprint (2010). (<a href="https://arxiv.org/abs/1009.4626.pdf">pdf</a>)
+      (<a href="https://arxiv.org/abs/1009.4626">arXiv</a>)
+	<span class="abs-non"><br/>
+	  <span class="abstract">
+	    An omnimosaic \(O(n, k, a)\) is defined to be an \(n \times n\) matrix, with
+entries from the set  \(A ={1, 2,\ldots, a}\), which contains each of the 
+\(a^{k^ 2}\) different \(k \times k\) matrices over  \( A\), as a submatrix. We provide constructions of omnimosaics
+and show that for fixed  \(a\)  the smallest possible size \(\omega (k, a)\)  of an \(O(n, k, a)\) 
+omnimosaic satisfies \(\frac{ka^{k/2}}{e} \leq \omega(k, a) \leq \frac{ka^{k/2}}{e}(1+ o (1))\) for a
+well-specified function \(o(1)\) that tends to zero as \(k \to \infty\).
+	  </span>
+	</span></p>
+
+<h2>Talks</h2>
+
+      <p><b>Computing zeta functions of cyclic covers in large characteristic</b>, (based on joint work with Vishal Arul, Alex J. Best, Edgar Costa, and Richard Magner) AMS Joint Math Meetings 2019 Special Session on Number Theory, Arithmetic Geometry, and Computation  (January 2019, upcoming).    
+
+      <p><b>The method of Chabauty-Coleman-Skolem for restrictions of  scalars</b>, Junior Number Theory Days, University of Rutgers - Newark (November 2018, upcoming).
+
+
+      <p><b>Computing zeta functions of cyclic covers in large characteristic</b>, (based on joint work with Vishal Arul, Alex J. Best, Edgar Costa, and Richard Magner) AMS Fall Central Sectional Meeting 2018 Special Session on From Hyperelliptic to Superelliptic Curves (October 2018, upcoming).      
+
+      <p><b>Computing zeta functions of cyclic covers in large characteristic</b>, (based on joint work with Vishal Arul, Alex J. Best, Edgar Costa, and Richard Magner) ANTS XIII (2018).
+
+
+
+
+      <h2>poster presentations</h2>
+
+<p><b> Computing Limitations to the LP Method for Sphere Packing
+from Non-negative Modular Forms</b> (with <a href="http://math.mit.edu/~cohn/">H. Cohn</a>) presented at ANTS XIII at University of Wisconsin Madison (2018). (<a href="http://www-math.mit.edu/~ngtriant/papers/poster_ants_v4.pdf">pdf</a>) 
+<span class="abs-non"><br/>
+	  <span class="abstract">
+In 2016, Vizovska proved that the \(E_8\) lattice gives the densest sphere packing problem in \(8\)-dimesions [<a href="http://annals.math.princeton.edu/2017/185-3/p07">V16</a>]. Shortly thereafter,  Cohn, Kumar, Miller, Radchenko, and Viazovska [<a href=http://annals.math.princeton.edu/2017/185-3/p08>CKM+16</a>] proved that the Leech lattice gives the densest sphere packing in \(24\)-dimensions. Their proofs find feasible solutions to the the Cohn-Elkies LP-method [<a href=http://annals.math.princeton.edu/2003/157-2/p09>CE03</a>] to give upper bounds on the density of sphere packings in \(8\) and \(24\) dimensions that match sphere packings centered on the \(E_8\) and Leech lattice respectively.
+
+ We prove that in contrast to the situation in dimensions \(8\) and \(24\), the LP-method is insufficient to prove that the densest known sphere packing is indeed the densest sphere packing in \(12, 16, 20, 28, 32\) dimensions. The obstructions comes from modular forms. We describe a general method involving linear programming over spaces of modular forms which appears to be the obstruction making the LP-method insufficient to solve the sphere packing problem in these dimensions.
+	  </span>
+	</span></p>
+
+
+      <p><b>Limitations from Modular Forms on LP-Bounds for Sphere Packing</b>, (with <a href="http://math.mit.edu/~cohn/">H. Cohn</a>) presented at Workshop Arithmetic Geometry and Computer Algebra, Carl von Ossietzky Universität (2017). (<a href="http://www-math.mit.edu/~ngtriant/papers/sphere_packing_poster_2017.pdf">pdf</a>)
+	<span class="abs-non"><br/>
+	  <span class="abstract">
+In 2016, Vizovska proved that the \(E_8\) lattice gives the densest sphere packing problem in \(8\)-dimesions [<a href="http://annals.math.princeton.edu/2017/185-3/p07">V16</a>]. Shortly thereafter,  Cohn, Kumar, Miller, Radchenko, and Viazovska [<a href=http://annals.math.princeton.edu/2017/185-3/p08>CKM+16</a>] proved that the Leech lattice gives the densest sphere packing in \(24\)-dimensions. Their proofs find feasible solutions to the the Cohn-Elkies LP-method [<a href=http://annals.math.princeton.edu/2003/157-2/p09>CE03</a>] to give upper bounds on the density of sphere packings in \(8\) and \(24\) dimensions that match sphere packings centered on the \(E_8\) and Leech lattice respectively.
+
+ We prove that in contrast to the situation in dimensions \(8\) and \(24\), the LP-method is insufficient to prove that the densest known sphere packing is indeed the densest sphere packing in \(12\) and \(16\) dimensions. We also provide evidence that the same is true in dimensions \(20, 28, 32\) and \(36\). The obstructions comes from modular forms. Moreover, we describe a general method involving linear programming over spaces of modular forms which appears to be the obstruction making the LP-method insufficient to solve the sphere packing problem in a wide range of dimensions.
+	  </span>
+	</span></p>
+
+
+
+
+    </div> <!-- /container -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--<script id="mainScript">
+if (typeof MathJax === 'undefined') {
+var html = katex.renderToString("c = \\pm\\sqrt{a^2 + b^2}");
+$("#output").html(html);
+}
+(function(){
+var mathArr = [];
+$(".math").each(function() {
+var texTxt = $(this).text();
+el = $(this).get(0);
+if(el.tagName == "DIV"){
+addDisp = "\\displaystyle";
+} else {
+addDisp = "";
+}
+if (typeof MathJax === 'undefined') {
+try {
+katex.render(addDisp+texTxt, el);
+}
+catch(err) {
+$(this).html("<span class='err'>"+err);
+    }
+    timeNow = new Date();
+    timeToProcess = timeNow - timeStart;
+    $("#ttp").text(timeToProcess);
+    } 
+    if(el.tagName == "DIV"){
+    $(this).after("<p>The LaTeX code:</p><pre>"+texTxt);
+      } else {
+      $(this).parent().after("<p>The LaTeX code:</p><pre>"+texTxt);
+	}
+	}); 
+	if (typeof MathJax !== 'undefined') {
+      fin = function () {
+	clearInterval(myTime);      
+      };
+	}  
+})();
+</script>
+-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hideshow.js"></script>
+  </body>
+</html>
+

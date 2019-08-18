@@ -1,0 +1,947 @@
+%Template for the AMS artcle style.
+
+%\usepackage{mathtools}
+%\usepackage{mathrsfs}
+
+
+%%
+%% This is LaTeX2e input.
+%%
+
+%% The following tells LaTeX that we are using the 
+%% style file amsart.cls (That is the AMS article style
+%%
+\documentclass[12pt]{amsart}
+
+
+\usepackage[margin=3cm]{geometry}
+\usepackage{color}
+%\usepackage{natbib}
+\usepackage{url, graphicx}
+\usepackage{amssymb, mathrsfs}
+\usepackage{comment}
+
+%\usepackage{hyperref}
+%% This has a default type size 10pt.  Other options are 11pt and 12pt
+%% This are set by replacing the command above by
+%% \documentclass[11pt]{amsart}
+%%
+%% or
+%%
+%% \documentclass[12pt]{amsart}
+%%
+
+%%
+%% Some mathematical symbols are not included in the basic LaTeX
+%% package.  Uncommenting the following makes more commands
+%% available. 
+%%
+
+%\usepackage{amssymb}
+
+%%
+%% The following is commands are used for importing various types of
+%% grapics.
+%% 
+
+%\usepackage{epsfig}  		% For postscript
+%\usepackage{epic,eepic}       % For epic and eepic output from xfig
+
+%%
+%% The following is very useful in keeping track of labels while
+%% writing.  The variant   \usepackage[notcite]{showkeys}
+%% does not show the labels on the \cite commands.
+%% 
+
+%\usepackageshowkeys}
+
+
+%%%%
+%%%% The next few commands set up the theorem type environments.
+%%%% Here they are set up to be numbered section.number, but this can
+%%%% be changed.
+%%%%
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+
+%%
+%% If some other type is need, say conjectures, then it is constructed
+%% by editing and uncommenting the following.
+%%
+
+%\newtheorem{conj}[thm]{Conjecture} 
+
+
+%%% 
+%%% The following gives definition type environments (which only differ
+%%% from theorem type invironmants in the choices of fonts).  The
+%%% numbering is still tied to the theorem counter.
+%%% 
+
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{claim}{Claim}
+
+%%
+%% Again more of these can be added by uncommenting and editing the
+%% following. 
+%%
+
+%\newtheorem{note}[thm]{Note}
+
+
+%%% 
+%%% The following gives remark type environments (which only differ
+%%% from theorem type invironmants in the choices of fonts).  The
+%%% numbering is still tied to the theorem counter.
+%%% 
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[thm]{Remark}
+
+
+%%%
+%%% The following, if uncommented, numbers equations within sections.
+%%% 
+
+\numberwithin{equation}{section}
+
+
+%%%
+%%% The following show how to make definition (also called macros or
+%%% abbreviations).  For example to use get a bold face R for use to
+%%% name the real numbers the command is \mathbf{R}.  To save typing we
+%%% can abbreviate as
+
+\newcommand{\sA}{\mathscr A}
+\newcommand{\sB}{\mathscr B}
+\newcommand{\sC}{\mathscr C}
+\newcommand{\sD}{\mathscr D}
+\newcommand{\sE}{\mathscr E}
+\newcommand{\sF}{\mathscr F}
+\newcommand{\sG}{\mathscr G}
+
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cS}{\mathcal S}
+
+\newcommand{\fka}{\mathfrak a}
+\newcommand{\fkb}{\mathfrak b}
+\newcommand{\fkc}{\mathfrak c}
+\newcommand{\fkd}{\mathfrak d}
+\newcommand{\fke}{\mathfrak e}
+\newcommand{\fkf}{\mathfrak f}
+\newcommand{\fkk}{\mathfrak k}
+\newcommand{\fkl}{\mathfrak l}
+\newcommand{\fkm}{\mathfrak m}
+\newcommand{\fkn}{\mathfrak n}
+\newcommand{\fko}{\mathfrak o}
+\newcommand{\fkp}{\mathfrak p}
+\newcommand{\fkq}{\mathfrak q}
+\newcommand{\fkA}{\mathfrak{A}}
+\newcommand{\fkP}{\mathfrak{P}}
+
+
+
+
+
+\newcommand{\bbA}{\mathbb A}
+\newcommand{\bbB}{\mathbb B}
+\newcommand{\bbC}{\mathbb C}
+\newcommand{\bbD}{\mathbb D}
+\newcommand{\bbE}{\mathbb E}
+\newcommand{\bbF}{\mathbb F}
+\newcommand{\bbG}{\mathbb G}
+\newcommand{\bbH}{\mathbb H}
+\newcommand{\bbN}{\mathbb N}
+\newcommand{\bbP}{\mathbb P}
+\newcommand{\bbQ}{\mathbb Q}
+\newcommand{\bbR}{\mathbb R}
+\newcommand{\bbS}{\mathbb S}
+\newcommand{\bbT}{\mathbb T}
+\newcommand{\bbZ}{\mathbb Z}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\norm}{Nm}
+\DeclareMathOperator{\trace}{Tr}
+\DeclareMathOperator{\image}{image}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\id}{1}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Ind}{Ind}
+
+
+
+\newcommand{\inv}{^{-1}}
+\newcommand{\ELL}{\cE\cL\cL}
+\newcommand{\artin}[2]{\left[ \frac{#1}{#2}\right]}
+\newcommand{\twobytwo}[4]{\left(\begin{array}{cc} #1 & #2 \\ #3 & #4\end{array} \right)}
+
+
+%%
+%% The comment after the defintion is not required, but if you are
+%% working with someone they will likely thank you for explaining your
+%% definition.  
+%%
+%% Now add you own definitions:
+%%
+
+%%%
+%%% Mathematical operators (things like sin and cos which are used as
+%%% functions and have slightly different spacing when typeset than
+%%% variables are defined as follows:
+%%%
+
+\DeclareMathOperator{\Aut}{Aut} 
+\DeclareMathOperator{\Char}{char} 
+\DeclareMathOperator{\dist}{dist} % The distance.
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Frac}{Frac}  
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Hom}{Hom} 
+\DeclareMathOperator{\Image}{Image} 
+\DeclareMathOperator{\Mat}{Mat} 
+\DeclareMathOperator{\rank}{rank} 
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\order}{order}
+\DeclareMathOperator{\tr}{tr} 
+\DeclareMathOperator{\trd}{trd} 
+\DeclareMathOperator{\nrd}{nrd} 
+\DeclareMathOperator{\red}{red} 
+\DeclareMathOperator{\residue}{res}
+
+%%
+%% This is the end of the preamble.
+%% 
+
+
+\begin{document}
+
+%%
+%% The title of the paper goes here.  Edit to your title.
+%%
+
+\title{The Chebotarev Density Theorem}
+
+%%
+%% Now edit the following to give your name and address:
+%% 
+
+\author{Nicholas George Triantafillou}
+\address{Department of Mathematics, Massachusetts Institute of Technology, 
+Cambridge, Massachusetts, 02139}
+\email{ngtriant@mit.edu}
+%\urladdr{www.math.sc.edu/$\sim$howard} % Delete if not wanted.
+
+%%
+%% If there is another author uncomment and edit the following.
+%%
+
+%\author{Second Author}
+%\address{Department of Mathematics, University of South Carolina,
+%Columbia, SC 29208}
+%\email{second@math.sc.edu}
+%\urladdr{www.math.sc.edu/$\sim$second}
+
+%%
+%% If there are three of more authors they are added in the obvious
+%% way. 
+%%
+
+%%%
+%%% The following is for the abstract.  The abstract is optional and
+%%% if not used just delete, or comment out, the following.
+%%%
+
+\begin{abstract}
+The Chebotarev density theorem states that for a finite Galois extension of number fields $L/K$ and a conjugacy class $\cC \subset \Gal(L/K)$, if $\delta$ denotes the density of primes $\fkp$ of $K$ such that the Artin symbol satisfies $\artin{L/K}{\fkp} = \cC$ then $\delta$ exists and is equal to $\#\cC/\# \Gal(L/K)$. This result (and its proof) has played an  important role in the development of modern number theory, inspiring Artin's proof of class field theory and several important results in modern arithmetic geometry. We give two proofs of the Chebotarev density theorem: Chebotarev's original proof \cite{Chebotarev26}, which predates class field theory, and a more recent proof due to Lagarias and Odlyzko \cite{LagariasOdlyzko77} and refined by Serre \cite{Serre81} which gives an ``effective'' error term. We also give several applications of the Chebotarev density theorem and discuss its connection with Dirichlet's theorem on primes in arithmetic progressions.
+
+This work was completed while supported by an NSF Graduate Fellowship.
+\end{abstract}
+
+%%
+%%  LaTeX will not make the title for the paper unless told to do so.
+%%  This is done by uncommenting the following.
+%%
+
+ \maketitle
+
+%%
+%% LaTeX can automatically make a table of contents.  This is done by
+%% uncommenting the following:
+%%
+
+ \tableofcontents
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+This paper is an expository paper on the Chebotarev density theorem and some applications written as a final project for Math 229X - Introduction to Analytic Number Theory as taught by Noam Elkies at Harvard in the Fall of 2015. We make an effort to keep this paper mostly self-contained, but in the interest of brevity, assume some standard definitions from analytic number theory.
+
+The notation used in the paper should be mostly self-explanatory. We include a brief appendix on notation, just in case. 
+
+Before we can discuss the Chebotarev density theorem, we need a definition.
+
+\begin{definition}[The Artin Symbol]\label{def:ArtinSymbol}
+Let $L/K$ be a finite Galois extension of number fields. For any prime $\fkp$ of $\cO_{K}$ and any prime $\fkP$ of $L$ lying over $\fkp$, the \emph{Artin symbol} $\artin{L/K}{\fkP}$ is the unique element $\sigma \in \Gal(L/K)$ such that
+\begin{align}
+\sigma(\alpha) = \alpha^{\norm(\fkp)} \pmod{\fkP} \text{ for all } \alpha \in L.
+\end{align}
+For any $\fkp$, all of the primes $\fkP$ lying over $\fkp$ are isomorphic via elements of $\Gal(L/K)$. Hence, the values of $\artin{L/K}{\fkP}$ lying over $\fkp$ are all conjugate in $\Gal(L/K)$. We denote by $\artin{L/K}{\fkp}$ the conjugacy class of $\artin{L/K}{\fkP}$ in $\Gal(L/K)$ for any $\fkP$ lying over $\fkp$. In the case that $\Gal(L/K)$ is abelian, we abuse notation and use $\artin{L/K}{\fkp}$ to refer to the single element of the conjugacy class.
+\end{definition}
+
+Informally, the Chebotarev density theorem says that for any finite Galois extension of number fields $L/K$ and any conjugacy class $\cC \subset \Gal(L/K)$, the number of primes $\fkp$ of $\cO_{K}$ such that $\artin{L/K}{\fkp} = \cC$ is proportional to the size of $\cC$. This can be thought of as an equidistribution result on primes. Although it is not obvious at first, we shall see throughout this paper (and particularly in Section \ref{sec:DirichletConnection}) that the Chebotarev density theorem is a generalization of and is intimately related to Dirichlet's theorem on the infinitude of primes in arithmetic progressions.
+
+%Chebotarev's density theorem is also a generalization of a classical result due to Frobenius about the factorization of polynomials. Frobenius's 
+
+
+It would be difficult to overstate the importance of the Chebotarev density theorem to modern number theory. Since its proof, it has been one of the most important tools for proving that various interesting subsets of primes are infinite. In the past 40 years, since the development of ``effective'' versions, the Chebotarev density has also been applied to the study of coefficients of modular forms, $\ell$-adic representations of infinite Galois groups, and many other subjects at the forefront of modern number theory and arithmetic geometry. Serre developed several of these applications in \cite{Serre81}. These applications are beyond the scope of this report, so we content ourselves to very briefly describe the general flavor of these results in Section \ref{sec:Applications}.
+%Of course, the Chebotarev density theorem is much more 
+
+The Chebotarev density theorem (or at least its original proof) had another extremely important consequence for modern number theory.
+While it might not be obvious from most modern treatments, which present the density theorem as a consequence of class field theory, the proof of the Chebotarev density theorem predated and inspired Artin's original proof of class field theory. For more details on the historical context of the Chebotarev density theorem in number theory (as well as an engaging account of the life and other work of Nikolai Chebotarev), see \cite{StevenhagenLenstra96}.
+
+\subsection{Outline}
+The remainder of the paper begins with three sections of setup and general discussion, followed by two sections proving two different ``strengths'' of the Chebotarev density theorem by two different methods, and finishing with a section presenting some applications.
+
+More precisely, in Section \ref{sec:MainResults}, we give three different statements of the Chebotarev density theorem: Chebotarev's original statement without an error term and two ``effective'' versions due to Lagarias and Odlyzko \cite{LagariasOdlyzko77} with a refinement by Serre \cite{Serre81} that specify the error term of the Chebotarev density theorem for $L/K$ in terms of $d_{L}$ (the absolute value of the the discriminant of $L$) and $n_{L}$ (the index of $L$ over $\bbQ$). After giving these precise statements of the Chebotarev density theorem, we demonstrate the relationship between Chebotarev's density theorem and Dirichlet's theorem on primes in arithmetic progressions in Section \ref{sec:DirichletConnection}. In Section \ref{sec:LFunctions} we introduce and briefly compare Artin $L$-functions and Dirichlet-Hecke $L$-functions, the central analytic objects needed for our proofs. 
+
+Sections \ref{sec:ChebForDD} and \ref{sec:EffectiveChebotarev} contain most of the heavy analytic number theory. In Section \ref{sec:ChebForDD}, we present a proof of the Chebotarev density theorem for Dirichlet density  without error term. We roughly follow the treatment of Chebotarev's original proof as described in \cite{FriedJarden08}. In particular, we do not assume knowledge of class field theory with the exception of one statement the special case of cyclotomic extensions.  
+
+Section \ref{sec:EffectiveChebotarev} is an exposition of Lagarias and Odlyzko's  ``effective'' version of the Chebotarev density theorem, based on their proof in \cite{LagariasOdlyzko77}. We attempt to capture the heart of the argument, which is remarkably similar to the proof of Dirichlet's theorem in \cite{Davenport00}. We fill in a few details omitted in \cite{LagariasOdlyzko77}, while omitting other details covered in depth in the original paper. \cite{LagariasOdlyzko77} is an excellent resource for the reader interested in an extremely clear treatment of the details we omit.
+
+Finally, we close the paper by discussing several different problems to which the Chebotarev density and its effective versions can be applied. We present four different types of applications, including proving the infinitude of a subset of primes, improving upper bounds on the size of zero density sets of primes, computing Galois groups, and proving that different collections of data about field extensions are equivalent. Besides giving a bit more information on each of these applications in Section \ref{sec:Applications}, we work out two simple applications in detail. 
+
+\section{Statement of Main Results} \label{sec:MainResults}
+
+In order to state our main results precisely, we need to recall the following definitions.
+
+\begin{definition}[Dirichlet and Natural Density for Number Fields]
+Let $K$ be a number field, and let $Q(K)$ be some set of prime ideals of $\cO_{K}$. The quantity 
+\begin{align}
+\lim_{s \to 1^{+}} \left(\sum_{\fkp \in Q(K)} \frac{1}{(\norm \fkp)^{s}}\right)/\left(\sum_{\fkp \in P(K)} \frac{1}{(\norm \fkp)^{s}}\right)
+\end{align}
+is called the Dirichlet density of $Q(K)$ if the limit exists. The quantity 
+\begin{align}
+\lim_{x \to \infty} \#\{\fkp \in Q(K): \norm \fkp \leq x\}/ \#\{\fkp \in P(K): \norm \fkp \leq x\}
+\end{align}
+is called the natural density of $Q(K)$ if the limit exists.
+\end{definition}
+
+We can now state the main results of this paper. (The statements are quoted from \cite{FriedJarden08} for Theorem \ref{thm:ChebotarevInDirichletDensity}, \cite{Serre81} for Theorem \ref{thm:LOEffectiveConditional}, and \cite{LagariasOdlyzko77} for Theorem \ref{thm:LOEffectiveUnconditional}.)
+
+\begin{thm} \label{thm:ChebotarevInDirichletDensity}
+Let $L/K$ be a finite Galois extension of number fields and let $\cC$ be a conjugacy class of $\Gal(L/K)$. Let
+\[
+P_{\cC} := \left\{\fkp \in P(K): \fkp \text{ is unramified in $L$, } \artin{L/K}{\fkp} = \cC\right\}.
+\]
+Then, the Dirichlet (resp. natural) density of $P_{\cC}$ in $\{\fkp \in P(K): \fkp \text{ is unramified in } L\}$ exists and is equal to $\frac{\#\cC}{\# \Gal(L/K)}$.
+\end{thm}
+
+Theorem \ref{thm:ChebotarevInDirichletDensity} (for Dirichlet density) is essentially the original statement of the Chebotarev density theorem, as proved in \cite{Chebotarev26} in 1926.
+
+Set
+\begin{align}
+\pi_{\cC}(x, L/K) = \{\# \fkp \in P_{\cC}: \norm \fkp \leq x\}.
+\end{align}
+After a short computation, the natural density version of Theorem \ref{thm:ChebotarevInDirichletDensity} can be rephrased as
+\begin{align}\label{eqn:ChebotarevInNaturalDensity}
+\pi_{\cC}(x,L/K) \sim \frac{\# \cC}{\# \Gal(L/K)} \int_{2}^{x} \frac{dt}{\log t} \sim \frac{\# \cC}{\# \Gal(L/K)} \frac{x}{\log x} \text{ as } x \to \infty.
+\end{align}
+
+While this is certainly a powerful statement, early proofs of Theorem \ref{thm:ChebotarevInDirichletDensity} and \eqref{eqn:ChebotarevInNaturalDensity} either gave no information about the error terms or gave estimates including constants depending in an unpredictable way on the fields $L$ and $K$. In their 1977 paper \cite{LagariasOdlyzko77}, Lagarias and Odlyzko made progress towards resolving this deficiency in the understanding of the subject by proving the following ``effective'' versions of the Chebotarev density theorem. We first give a statement conditional on GRH as refined by Serre in \cite{Serre81}.
+
+\begin{thm}[Theorem 1.1. of \cite{LagariasOdlyzko77} refined as in \cite{Serre81}] \label{thm:LOEffectiveConditional}
+Let $L/K$ be a Galois extension of number fields. Assume the generalized Riemann hypothesis for the Dedekind zeta function $\zeta_{L}(s)$. Then, there is an effectively computable positive absolute constant $c$ such that for every $x > 2$,
+\begin{align}
+\left| \pi_{\cC}(x, L/K) - \frac{\# \cC}{\# \Gal(L/K)} \int_{2}^{x} \frac{dt}{\log t} \right| \leq c \left( \frac{\# \cC}{\# \Gal(L/K)} x^{1/2} \log(d_{L} x^{n_{L}})\right).
+\end{align}
+\end{thm}
+
+Lagarias and Odlyzko also proved an unconditional version of their ``effective'' Chebotarev density theorem, with the remaining ineffectivity quantified in terms of the location of a possible Siegel zero. The shape of their result is reminiscent of the quantitative versions of Dirichlet's theorem on primes in arithmetic progressions. The result is 
+\begin{thm}[Theorem 1.3. of \cite{LagariasOdlyzko77}]\label{thm:LOEffectiveUnconditional}
+If $n_{L} > 1$, then $\zeta_{L}(s)$ has at most one zero in the region defined by $s = \sigma + it$ with 
+\begin{align}
+1 - (4 \log d_{L})\inv \leq \sigma \leq 1, \ \ \ |t| \leq (4 \log d_L)\inv.
+\end{align}
+%(If $n_{L} = 1$, $L = \bbQ$ and there is no zero in $|t| \leq 14, \sigma > 0$.)\\
+If such a zero exists, it must be real and simple. Call it $\beta_{0}$.\\
+Then, there exist effectively computable absolute constants $c_{1}$ and $c_{2}$ such that if 
+\begin{align}
+x \geq \exp(10 n_{L} (\log d_L)^2),
+\end{align}
+then
+\begin{align}
+\left| \pi_{\cC}(x, L/K) - \frac{\# \cC}{\# \Gal(L/K)} \int_{2}^{x} \frac{dt}{\log t} \right| \leq \frac{\# \cC}{\# \Gal(L/K)} \int_{2}^{x^{\beta_{0}}} \frac{dt}{\log t} + c_{1} x \exp\left(- c_2 n_{L}^{-1/2} (\log x)^{1/2}\right),
+\end{align}
+where the $\beta_{0}$ term is present only when $\beta_{0}$ exists. If $\cC$ is replaced by a union of conjugacy classes, the same estimate holds after multiplying the last error term by the number of conjugacy classes in $\cC$.
+\end{thm}
+
+Theorems \ref{thm:LOEffectiveConditional} and \ref{thm:LOEffectiveUnconditional} lead immediately to upper bounds on the lowest norm of a prime with $\artin{L/K}{\fkp} = \cC$, although better results along these lines can be achieved via more specialized methods, as in \cite{LagariasMontgomeryOdlyzko79}.
+
+While there are several other statements of the Chebotarev density theorem, including a version for function fields (see for example \cite{FriedJarden08}), such further statements are beyond the scope of this paper.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The Connection to Dirichlet's Theorem on Primes in Arithmetic Progressions}\label{sec:DirichletConnection}
+
+While on the surface the Chebotarev density theorem is a statement about how prime ideals behave under field extensions, the Chebotarev density theorem is also a generalization of Dirichlet's Theorem on primes in arithmetic progressions. Indeed, Dirichlet's theorem (modulo $n$) is the special case of the Chebotarev density theorem when $K = \bbQ$ and $L = \bbQ(\zeta_{n})$, where $\zeta_{n}$ is a primitive $n$th root of unity.
+
+\begin{cor}[Dirichlet's Theorem on Primes in Arithmetic Progressions] \label{cor:Dirichlet}
+Let $a,n \geq 1$ be positive integers with $(a,n) = 1$. Then, the natural (resp. Dirichlet) density of primes $p$ such that $p \equiv a \pmod{n}$ in the set of all primes of $\bbZ$ is $\frac{1}{\phi(n)}$.
+\end{cor}
+
+\begin{proof}
+Let $\zeta_{n} \in \overline{\bbQ}$ be a primitive $n$th root of unity, $K = \bbQ$, and $L = \bbQ(\zeta_{n})$. By the theory of cyclotomic extensions, $L/K$ is Galois with $\Gal(L/K) \cong (\bbZ/n\bbZ)^{\times}$. This isomorphism is given explicitly by identifying an element $a \in (\bbZ/n\bbZ)^{\times}$ with the unique automorphism of $L/K$ that maps $\zeta_{n}^{k}$ to $\zeta_{n}^{ak}$ for all $k$.
+
+Now, for a prime number $p \in \bbZ$, $\norm(p\bbZ) = p$. If $\fkP$ is a prime of $\cO_L$ lying over $p$ such that $\sigma \in \Gal(L/K)$ satisfies $\sigma(\alpha) = \alpha^{\norm(p\bbZ)} \mod \fkP$, we must have that $\sigma(\zeta^{k}_n) = \zeta_{n}^{pk} \mod \fkP$ for all $k$. So long as $p\nmid n$, the ideal $p\bbZ$ does not ramify in $L$, so $\artin{L/K}{p\bbZ} = \overline{p} \in \Gal(L/K)$, where $\overline{p}$ is the class of $p$ modulo $n$. Thus, $\artin{L/K}{p\bbZ} = a$ if and only if $p \equiv a \mod n$.
+
+In our setting, Theorem \ref{thm:ChebotarevInDirichletDensity} states that the natural (resp. Dirichlet) density of primes ideals $p \bbZ$ of $\bbQ$ such that $\artin{L/K}{p\bbZ} = a$ is $\frac{1}{\# \Gal(L/K)} = \frac{1}{\phi(n)}$. In other words, the natural (resp. Dirichlet) density of primes $p$ such that $p \equiv a \mod n$ is $\frac{1}{\phi(n)}$.
+\end{proof}
+
+We have seen that Dirichlet's theorem is a special case of Chebotarev's density theorem. In some sense, Dirichlet's theorem is much more than a special case. For instance, the main analytic step in the proof of the Chebotarev density theorem is used to prove the theorem in the case where $L/K$ is a cyclotomic extension (or an abelian extension if class field theory is assumed).  The strategy for proving Chebotarev in this special case is very similar to the proof of Dirichlet's theorem, with Dirichlet $L$-functions replaced by a suitable generalization defined in terms of prime ideals of $\cO_K$ and the extension $L$. The full power of Chebotarev, first for abelian extensions and then for general extensions, follows by some clever applications of Galois theory. Even when controlling the error term, the strategy of proof is exactly the same as with Dirichlet's theorem, but with more complicated book-keeping. Modern proofs taking into account the error term tend to closely mirror the proof of Dirichlet's theorem with error term.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Dirichlet-Hecke $L$-Functions and Artin $L$-Functions}\label{sec:LFunctions}
+
+Having seen that the Chebotarev density theorem is a generalization of Dirichlet's theorem, we would like to mimic the proof. Before we have any hope of carrying out the proof, we need to answer the question: What is the right generalization of Dirichlet $L$-functions?
+
+For our purposes, there are two answers: Dirichlet-Hecke $L$-functions and Artin $L$-functions. In the remainder of this section, we define both types of $L$-functions and discuss how they are related.
+
+First, we define Dirichlet-Hecke $L$-functions. These $L$-functions generalize Dirichlet $L$-functions to base fields other than $\bbQ$. We first need to set up some notation as in section VI of \cite{Lang86}.
+
+\begin{definition} \label{def:cIdealClassGroup}
+Let $K$ be a number field with ring of integers $\cO_{K}$. Let $\fkc = \prod_{\fkp} \fkp^{m(\fkp)}$  be an ideal of $\cO_{K}$ with its factorization into primes. Denote the localization of $\cO_{K}$ at $\fkp$ by $\cO_{\fkp}$ with maximal ideal $\fkm_{\fkp}$.
+Set
+\begin{align}
+I(\fkc) := \left\{\fka \text{ fractional ideals of } K: \fka \text{ and } \fkc \text{ are relatively prime.} \right\}, 
+\end{align}
+with the natural group structure and let
+\begin{align}
+P(\fkc) := \left\{\text{principal fractional ideals }x\cO_{K} \text{ of $K$ satisfying (1) and (2).}\right\} 
+\end{align}
+\begin{enumerate}
+\item If $m(\fkp) > 0$, i.e. $\fkp|\fkc$, then $x \in \cO_{\fkp}$ and moreover $x \equiv 1 \mod \fkm_{\fkp}^{m(\fkp)}$.
+\item For each real embedding $\sigma: K \to \bbR$, $\sigma(x) > 0$, i.e. $x$ is a \emph{totally positive} element of $K$.
+\end{enumerate}
+The quotient $G(\fkc) = I(\fkc)/P(\fkc)$ is called the $\fkc$-\emph{ideal class group} of $\fkc$.
+\end{definition}
+
+\begin{remark}
+To be precise, we are really defining the ideal class group of the $\fkc$ together with \emph{all} of the real places. The condition on the real embeddings can be relaxed to get an ideal class group which only takes into account some of the real places.
+\end{remark}
+
+As with the usual ideal class group, the $\fkc$-ideal class group is also finite. Theorem 1 of chapter VI of \cite{Lang86} provides an explicit formula for the cardinality.
+
+The finite abelian group $G(\fkc)$ will play the role in the construction of Dirichlet-Hecke $L$-functions that the group $(\bbZ/n\bbZ)^{\times}$ plays in the construction of Dirichlet $L$-functions. Indeed, $G(\fkc)$ is a generalization of $(\bbZ/n\bbZ)^{\times}$ to ideals of number fields. If $K = \bbZ$ and $\fkc = n\bbZ$, then $I(n\bbZ) = \{a\bbZ: a \in \bbZ, (a,n) = 1\}$ and $P(n\bbZ) = \{a \bbZ: a \in \bbZ, a \equiv 1 \pmod{n}\}$, so $G(n\bbZ) = (\bbZ/n\bbZ)^{\times}$.
+
+Let $\widehat{G(\fkc)}$ denote the group of characters of $G(\fkc)$. We are now ready to define the Dirichlet-Hecke $L$-function associated to $\chi \in \widehat{G(\fkc)}$.
+
+\begin{definition} \label{def:DirichletHeckeLFunction}
+Let $\fkc$ be an ideal of $\cO_{K}$ and let $\chi \in \widehat{G(\fkc)}$. The Dirichlet-Hecke $L$-function associated to $\fkc$ and $\chi$ is the analytic function 
+\begin{align}
+L_{\fkc}(s,\chi) := \sum_{(\fka, \fkc) = 1}\frac{\chi(\fka)}{(\norm \fka)^{s}} = \prod_{(\fkp, \fkc) = 1}\left(1 - \frac{\chi(\fkp)}{(N\fkp)^s}\right)\inv,
+\end{align}
+defined on the half-plane $\re(s) > 1$, where the sum is over all ideals $\fka \subset \cO_{K}$ relatively prime to $\fkc$ and the product is over all \emph{prime} ideals $\fkp \subset \cO_{K}$ relatively prime to $\fkc$. Note that the Euler product and $L$-series are equal because $\chi(\fka) \cdot \chi(\fkb) = \chi(\fka \cdot \fkb)$.
+\end{definition}
+
+Next, we define Artin $L$-functions, our second generalization of Dirichlet $L$-functions. Artin $L$-functions are defined as an Euler product involving representations of $\Gal(L/K)$ for a finite Galois extension $L/K$ of number fields. 
+
+\begin{definition}
+Let $L/K$ be a Galois extension of number fields with Galois group $\Gal(L/K)$. Let $\rho: \Gal(L/K) \to V$ be a finite dimensional complex representation. For each prime $\fkp$ of $\cO_{K}$, choose a prime $\fkP$ of $\cO_{L}$ lying over $\fkp$. Then, the Artin $L$-function associated to $L/K$ and $\rho$ is
+\begin{align}
+L_{L/K}(s,\rho) := \prod_{\fkp \subset \cO_{K}} \det \left(1 - (\norm \fkp)^{-s} \rho\left(\artin{L/K}{\fkP}\right)\right)^{-1},
+\end{align}
+on $\re(s) > 1$, where we restrict to the subspace of $V$ of elements fixed by the inertia group at $\fkP$ before taking the determinant if $\fkp$ ramifies in $L$. Note that the local factors are well-defined irrespective of the choice of $\fkP$ over $\fkp$ since making a different choice of $\fkP$ corresponds to conjugating the matrix $\left(1 - (\norm \fkp)^{-s} \rho\left(\artin{L/K}{\fkP}\right)\right)$ by some $\rho(\sigma)$ and the determinant is conjugation-invariant.
+\end{definition}
+
+In the special case where $L = \bbQ(\zeta_{n})$ and $K = \bbQ$, we can identify elements of $\Gal(L/K)$ with characters of $(\bbZ/n\bbZ)^{\times}$. In this case, the local factors at the unramified primes are $(1 - \chi(p)p^{-s})$, and (at least for primes not dividing $n$) we recover the Dirichlet $L$-functions modulo $n$.
+
+\begin{remark} Throughout the remainder of this paper, we will typically ignore the ramified primes when discussing Artin $L$-functions, although we will point out/bound their contribution when necessary. While this may seem cavalier, very little will be lost for our purposes since we are interested in density statements. Only finitely many primes ramify in a finite extension of number fields and the possible primes are well-controlled by invariants of the field, so ramification won't  interfere too badly with our estimates.
+\end{remark}
+
+Although Artin $L$-functions cannot typically be expressed as $L$-series when $\Gal(L/K)$ is non-abelian, the logarithm and logarithmic derivatives of Artin $L$-functions still have nice expressions.  (See Section 2.1.4 of \cite{Snyder02} for full details.) Since $L_{L/K}(s,\rho)$ is defined as an Euler product, $\log L_{L/K}(s,\rho)$ is a sum over local factors. At a prime $\fkp$ which does not ramify in $L$, the factor is $-\log \det\left(1 - (\norm \fkp)^{-s} \rho\left(\artin{L/K}{\fkP}\right)\right)$. Diagonalizing $\rho\left(\artin{L/K}{\fkP}\right)$ turns the determinant into a product. Taking Taylor expansions of each term, the factor at $\fkp$ is $\sum_{m = 1}^{\infty} \frac{1}{m} \trace\rho\left(\artin{L/K}{\fkP}^{m} \right) (\norm \fkp)^{-sm}$. The ramified primes require a bit more attention since the local factors are more complicated. The result is as follows:
+
+First, if $\phi = \trace(\rho): \Gal(L/K) \to \bbC$ is the character associated to the representation $\rho: \Gal(L/K) \to V$, $\fkP$ is any ideal of $\cO_{L}$ lying over the ideal $\fkp$ of $\cO_{K}$, and $I_{\fkP}$ is the inertia group at $\fkP$, write
+\begin{align}
+\phi_{K}(\fkp^{m}) := \frac{1}{\# I_{\fkP}} \sum_{\alpha \in I_{\fkP}} \phi\left(\artin{L/K}{\fkP}^{m} \alpha\right).
+\end{align}
+This is well-defined since $\artin{L/K}{\sigma(\fkP)}^{m} = \sigma \circ \artin{L/K}{\fkP}^{m} \circ\sigma\inv$, $I_{\sigma(\fkP)} = \sigma I_{\fkP} \sigma\inv$ and $\phi$ is a class function. In this notation,
+\begin{align} \label{eqn:ArtinLogFormula}
+\log L_{L/K}(s,\phi) &= \sum_{\fkp \subset \cO_{K}}\sum_{m = 1}^{\infty} \frac{1}{m} \phi_{K}(\fkp^m) (\norm \fkp)^{-ms},\\ \label{eqn:ArtinLogDerFormula}
+-\frac{L'_{L/K}}{L_{L/K}}(s,\phi) &= \sum_{\fkp \subset \cO_{K}} \sum_{m=1}^{\infty} \phi_{K}(\fkp^m) \log(\norm \fkp) (\norm \fkp)^{-ms}.
+\end{align}
+Warning: the functions $\phi_{K}$ are in general non-linear. In particular, we cannot take the exponent outside of the $\phi_{K}$. 
+
+Dirichlet-Hecke $L$-functions and Artin $L$-functions each have their own advantages and disadvantages, particularly in the context of the Chebotarev density theorem. Artin $L$-functions clearly involve the Artin symbol -- the function we are studying. The downside is that Artin $L$-functions use non-linear characters of the Galois group. As a result, we no longer have an $L$-series representation and therefore are deprived of several standard tools. For instance, the proof of analyticity for Dirichlet $L$-functions does not hold for general Artin $L$-functions. When working with Dirichlet-Hecke $L$-functions, the toolbox is full, but it is less clear how characters of a $\fkc$-ideal class group relate to the Artin character.
+
+Fortunately, class field theory implies that when $L/K$ is an abelian extension, Artin $L$-functions are the same as Dirichlet-Hecke $L$-functions for appropriately chosen $\fkc$ (up to modification at the ramified places). The general case of the Chebotarev density theorem follows from the case of abelian (in fact, cyclic) Galois group, using only a bit of field theory and representation theory of finite groups. Hence, we may assume that the extensions we are dealing with are abelian, in which case, we have the best of both worlds.
+
+At this point, we recall that although this view may suggest that the Chebotarev density theorem is a consequence of class field theory, Chebotarev did not have access to the full statements of class field theory when he wrote his paper \cite{Chebotarev26} in 1926. Indeed, the Chebotarev density theorem led to the first full proofs of class field theory. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The Chebotarev Density Theorem for Dirichlet Density} \label{sec:ChebForDD}
+
+In this section, we prove Theorem \ref{thm:ChebotarevInDirichletDensity}, the original statement of the Chebotarev density theorem for Dirichlet density, following Chebotarev's original strategy \cite{Chebotarev26}. Our treatment is inspired by \cite{FriedJarden08}, although our notation is slightly different. The proof starts with the case that $L/K$ is cyclotomic. This case goes as follows:
+\begin{enumerate}
+\item Compute the volume of a fundamental domain of a certain lattice to bound the number of representatives of a class in $G(\fkc)$ with small norm. Use this to meromorphically continue $L_{\fkc}(s,\chi)$ to a function on $\re(s) > 1 - \frac{1}{n_{K}}$ which is analytic, except for a possible pole at $1$ which exists if and only if $\chi$ is trivial.
+\item Prove a result from class field theory for cyclotomic extensions to see that the Dirichlet-Hecke $L$-functions are Artin $L$-functions.
+\item Use class field theory for cyclotomic extensions and the behavior at $s = 1$ of the zeta function $L_{\fkc\cO_{L}}(s,\chi_{0})$ to conclude that $L_{\fkc}(s,\chi) \neq 0$ for $\chi \neq \chi_{0}$.
+\item Take an appropriate character-weighted linear combination of the $L_{\fkc}(s,\chi)$.
+\end{enumerate}
+Note that steps (1), (3), and (4) are analogous to steps in the proof of Dirichlet's theorem without error term.
+
+The case that $L/K$ is abelian follows from the cyclotomic case by Chebotarev's ``field crossing'' argument. The general case can be reduced to the cyclic (and therefore abelian) case using a bit of representation theory.
+
+\begin{proof}[Proof of Theorem \ref{thm:ChebotarevInDirichletDensity} for Cyclotomic Extensions.]
+We first recall that the abscissa of convergence of an $L$-series is controlled by its coefficients. Specifically,
+\begin{prop}[\cite{Lang86}, Chp. VIII Theorem 4]\label{prop:WhereDoesItConverge}
+Let $\{a_{n}\}$ be a sequence of complex numbers, with partial sums $A_{n}$. Let $0 \leq \sigma_0 < 1$ and suppose that for some $\rho \in \bbC$, $A_{n} = n \rho + O(n^{\sigma_{0}})$. Then, $f(s) = \sum a_{n}/n^s$ has an analytic continuation to $\re(s) > \sigma_{0}$, except for a simple pole with residue $\rho$ at $s = 1$ when $\rho$ is non-zero.
+\end{prop}
+\begin{proof}
+If $\rho$ is non-zero, let $b_{n} = a_{n} - \rho$, let $B_{n}$ be the partial sums of $b_{n}$, and let $g(s) = \sum b_{n}/n^s$. Then, $f(s) = g(s) + \rho \zeta(s)$. Write $s = \sigma + it$. If $\sigma > \sigma_{0}$, by summation-by-parts, 
+\begin{align*}
+\sum_{n = M+1}^{N} \frac{b_{n}}{n^{s}} & = \int_{M+1/2}^{N+1/2} \frac{1}{x^{s}} dB(x) =  B_{N}\frac{1}{(N+1/2)^s} + s  \int_{M+1/2}^{N+1/2} \frac{B(x)}{x^{s+1}} dx \\
+  & \ll
+  N^{\sigma - \sigma_{0}} + |s| \int_{M+1/2}^{N+1/2} \frac{1}{x^{\sigma + 1 - \sigma_{0}}} dx \ll \frac{1}{N^{\sigma - \sigma_{0}}} + \frac{|s|}{(\sigma - \sigma_{0})(M + 1/2)^{\sigma - \sigma_{0}}},
+\end{align*}
+so the series clearly converges at $s$.
+\end{proof}
+To take advantage of this proposition, we rewrite the $L_{\fkc}(s,\chi)$ as a sum over classes in $G(\fkc)$.  We use the following proposition, which appears as Theorem 3 of Chapter VI of \cite{Lang86}.
+\begin{prop}
+Let $\fkc$ be an ideal of $\cO_{K}$ and $\sA$ be a class in $G(\fkc)$. There is a constant $\rho_{\fkc}$ depending only on $\fkc$ such that the number of ideals $\fka$ of $\cO_{K}$ such that $\fka \in \sA$ and $\norm \fka \leq n$ is $\rho_{\fkc}n + O(N^{1-n_{K}\inv})$. 
+\end{prop}
+We omit the proof, which involves computing the volume of the fundamental domain of a lattice.
+
+Since $\rho_{\fkc}$ is independent of the class $\sA \in G(C)$, breaking up the sum of the coefficients $\chi(\fka)$ of $L_{\fkc}$ by class shows that as $n \to \infty$,
+\begin{align}
+\sum_{(\fka, \fkc) = 1, \norm \fka \leq n} \chi(\fka) = \begin{cases}
+\# G(\fkc) \cdot \rho_{\fkc} n + O(n^{1 - n_{K}\inv}), & \chi = \chi_{0} \\
+O(n^{1 - n_{K}\inv}), & \chi \neq \chi_{0}.
+\end{cases}
+\end{align}
+Applying Proposition \ref{prop:WhereDoesItConverge} proves
+\begin{lem} \label{lem:MeromorphicContinuation}
+$L_{\fkc}(s,\chi)$ extends to a meromorphic function on $\re(s) > 1 - n_{K}\inv$ which is analytic except for a simple pole of residue $\# G(\fkc) \rho_{\fkc}$ at $1$ when $\chi = \chi_{0}$.
+\end{lem}
+
+Now that we have proved an analytic continuation, we wish to move toward the world of Artin $L$-functions. We could do this for all abelian extensions by citing an appropriate theorem of class field theory. However, in the cyclotomic case, the proof has an interesting analytic step, so we present it below.
+
+Suppose for now that $L/K$ is an abelian extension, and let $\fkc$ be a prime such that $\fkp|\fkc$ for all primes $\fkp$ of $K$ that ramify in $L$. Then, the Artin symbol extends by multiplication to a homomorphism $I(\fkc) \to \Gal(L/K)$, which we denote $\artin{L/K}{\cdot}_{\fkc}$. Restricting further to the case where $L/K$ is cyclotomic, we have:
+\begin{lem}[Lemma 6.5.3. of \cite{FriedJarden08}] \label{lem:cyclotomic1}
+Let $\zeta_{m}$ be a primitive $m$th root of $1$, let $L/K$ be a Galois extension of number fields such that $L \subset K(\zeta_{m})$ and let $\fkc$ be an $\cO_{K}$-ideal such that $m|\fkc$. Then, $P(\fkc) \subseteq \ker \artin{L/K}{\cdot}_{\fkc}$.
+\end{lem}
+The proof is not hard but is completely algebraic, so we omit it. See \cite{FriedJarden08} for details.
+
+Lemma \ref{lem:cyclotomic1} implies that $\artin{L/K}{\cdot}_{\fkc}$ descends to a map $\overline{\artin{L/K}{\cdot}_{\fkc}}: G(\fkc) \to \Gal(L/K)$. Let $G := \image\overline{\artin{L/K}{\cdot}_{\fkc}} \subset \Gal(L/K)$. Given a character $\chi \in \widehat{G}$, the composition $\chi \circ \overline{\artin{L/K}{\cdot}_{\fkc}}$ is a character of $G(\fkc)$. This allows us to write $L_{\fkc \cO_{L}}(s,\chi_{0})$ in terms of the $L_{\fkc}\left(s, \chi \circ \overline{\artin{L/K}{\cdot}_{\fkc}}\right).$
+Working at the level of local factors, for $\fkp\nmid \fkc$, the order of $\artin{L/K}{\fkp}$ is equal to the inertial degree $f$. Since $\fkp$ does not ramify in $L$, there are $\frac{\# \Gal(L/K)}{f}$ primes lying over $\fkp$. Hence,
+\begin{align}
+\prod_{\fkP \text{ lying over } \fkp} \frac{1}{1 - (\norm \fkP)^{-s}} = \left( \frac{1}{1 - (\norm \fkp)^{-sf}}\right)^{\frac{\# \Gal(L/K)}{f}} = \prod_{\chi \in \widehat{G}} \left( \frac{1}{1 - \chi\left( \artin{L/K}{\fkp}\right)(\norm \fkp)^{-sf}}\right)^{\frac{\# \Gal(L/K)}{\# G}},
+\end{align} 
+where the second equality is a standard statement about characters.
+Taking the product of both sides over all $\fkp$ prime to $\fkc$, gives the formula
+\begin{align} \label{eqn:ProductFromLowerField}
+L_{\fkc\cO_{L}}(s, \chi_{0}) = \prod_{\chi \in \widehat{G}} L_{\fkc}\left(s, \chi \circ \overline{\artin{L/K}{\cdot}_{\fkc}} \right)^{\frac{\# \Gal(L/K)}{\# G}}.
+\end{align} 
+Using this formula, we see 
+\begin{thm}
+Let $\zeta_{m} \in \overline{\bbQ}$ be a primitive $m$th root of $1$, let $L/K$ be a Galois extension of number fields satisfying $K \subset L \subset K(\zeta_{m})$ and let $\fkc \subset K$ be an ideal divisible by $m$. Then, the map $\overline{\artin{L/K}{\cdot}_{\fkc}}: G(\fkc) \to \Gal(L/K)$ is surjective. \\
+Moreover, if $\chi$ is a nontrivial character of $\Gal(L/K)$, $L_{\fkc}\left(1, \chi \circ \overline{\artin{L/K}{\cdot}_{\fkc}} \right) \neq 0$.
+\end{thm}
+\begin{proof}
+For any character $\chi \in \widehat{G}$, Lemma \ref{lem:MeromorphicContinuation}, implies that 
+\begin{align} \label{eqn:OrderAt1}
+\ord_{s = 1} L_{\fkc}\left(1, \chi \circ \overline{\artin{L/K}{\cdot}_{\fkc}} \right) = \begin{cases} a_{\chi},&  \chi \neq \chi_{0} \\ -1, & \chi = \chi_{0}, \end{cases}
+\end{align} 
+for some constants $a_{\chi} \in \bbZ_{\geq 0}$.
+
+Applying \eqref{eqn:OrderAt1} to \eqref{eqn:ProductFromLowerField} yields
+\begin{align}
+-1 = \frac{\# \Gal(L/K)}{\# G} \left( -1 + \sum_{\chi \in \widehat{G}} a_{\chi} \right).
+\end{align}
+Then, $\frac{\# \Gal(L/K)}{\# G}$ divides $1$, so $G = \Gal(L/K)$. Since $a_{\chi} \geq 0$ for $\chi \neq \chi_{0}$, we must have $a_{\chi} = 0$ for $\chi \neq \chi_{0}$.
+\end{proof}
+The statement $\Gal(L/K) = G$ means that the Galois characters all induce characters of $G(\fkc)$, so the Artin $L$-functions for $L/K$ are all Dirichlet-Hecke $L$-functions for $\fkc$.
+
+Having proved the special case of class field theory that we needed, we are ready to begin our final attack on the Chebotarev density theorem for cyclotomic extensions.
+
+Recall that to apply Dirichlet $L$-functions to compute the density of primes in $\bbQ$ congruent to $a \mod n$, one first shows that the contribution of higher powers in the double summation expression for $\log L(s,\chi)$ is $O(1)$ as $s \to 1$ from above and then takes a linear combination of the $\log L(s,\chi)$ weighted by appropriate characters. We do the same here.
+
+\begin{lem} \label{lem:LFunctionsAndSumsOverPrimes}
+Let $\zeta_{m} \in \overline{\bbQ}$ be a primitive $m$th root of unity, let $L/K$ be a Galois extension of number fields such that $K \subset L \subset K(\zeta_{m})$, and let $\chi$ be a character of $\Gal(L/K)$. Then, as $s \to 1^+$,
+\begin{align}
+\log L_{L/K}(s, \chi) = \sum_{\fkp \subset \cO_{K}} \frac{\chi\left(\artin{L/K}{\fkp}\right)}{(\norm \fkp)^{s}} + O(1).
+\end{align}
+\end{lem}
+\begin{proof}
+From the Euler product and the Taylor series for $\log$, we know that
+\begin{align}
+\log L_{L/K}(s,\chi) = \sum_{\fkp \subset \cO_{K}} \sum_{k =1}^{\infty} \frac{\chi\left(\artin{L/K}{\fkp}^{k}\right)}{k(\norm \fkp)^{sk}} + O(1), 
+\end{align}
+where the $O(1)$ term accounts for the finitely many ramified primes. There are at most $n_{K}$ primes of $\cO_{K}$ lying above any prime $p\bbZ \subset \bbZ$ and each has norm at least $p$. Hence, the total contribution from the $k > 1$ is bounded in magnitude by 
+\begin{align}
+n_{K} \sum_{k =2}^{\infty} \frac{1}{p^{k\sigma}} \ll O(1),
+\end{align}
+which proves the lemma.
+\end{proof}
+
+Since the ramified places affect only the residue of the pole of $L_{L/K}(s,\chi)$ at $1$ and not its order, given any $\sigma \in \Gal(L/K)$, Lemma \ref{lem:MeromorphicContinuation} implies that as $s \to 1^+$,
+\begin{align}
+\log L_{L/K}(s,\chi_{0}) & = -\log(s-1) + O(1), \ \ \text{and}\\
+\sum_{\chi \in \widehat{\Gal(L/K)}}\frac{1}{\# \Gal(L/K)} \chi(\sigma\inv) \log L_{L/K}(s, \chi) & = - \frac{1}{\# \Gal(L/K) \cdot \log(s-1)}.
+\end{align}
+On the other hand, by the orthogonality of characters and Lemma \ref{lem:LFunctionsAndSumsOverPrimes},
+\begin{align}
+\log L_{L/K}(s,\chi_{0}) & = \sum_{\fkp \subset \cO_{K}} \frac{1}{(\norm \fkp)^s} + O(1), \ \ \text{and} \\
+\sum_{\chi \in \widehat{\Gal(L/K)}}\frac{1}{\# \Gal(L/K)} \chi(\sigma\inv)  \log L_{L/K}(s, \chi) & = \sum_{\fkp \subset \cO_{K}: \artin{L/K}{\fkp} = \sigma} \frac{1}{(\norm \fkp)^s} + O(1).
+\end{align}
+Putting these together, we see that $\displaystyle \lim_{s \to 1^{+}} \frac{\sum_{\fkp \subset \cO_{K}: \artin{L/K}{\fkp} = \sigma} \frac{1}{(\norm \fkp)^s}}{\sum_{\fkp \subset \cO_{K}} \frac{1}{(\norm \fkp)^s}} = \frac{1}{[L:K]}$, completing the proof of the Chebotarev density theorem for cyclotomic extensions.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:ChebotarevInDirichletDensity} for Abelian Extensions.]
+To extend from the cyclotomic case to the general abelian case, we have two options. One option is to cite the appropriate theorems of class field theory to show that for any $L/K$ abelian, we can still choose an ideal $\fkc \subset \cO_{K}$ such that the map $G(\fkc) \to \Gal(L/K)$ is surjective. The remainder of the proof from the cyclotomic case then goes through for the abelian case nearly unchanged. Instead, we present a ``field crossing'' argument similar to that of Chebotarev's original proof. Related ideas are often used as a preliminary step in proofs of class field theory, including Artin's original proof.
+
+We start by outlining the proof, generally following the approach of \cite{FriedJarden08}. Given $L/K$ an abelian Galois extension of number fields and $\sigma \in \Gal(L/K)$, the first step is to construct an auxiliary cyclotomic extension of number fields $F/E$ of degree $k \cdot \order(\sigma)$ for $k \in \bbZ$ such that $L \subset F$, $K \subset E$, and $F/K$ is Galois. The contribution of primes of $E$ which are not split in $E/K$ can be ignored, since there are finitely many ramified primes and the rest have large norm. This allows us to compute the densities for many subsets of elements of $\Gal(F/K)$ which restrict to $\sigma$ on $L$. The sum of these densities gives a lower bound for the density of the primes mapping to the conjugacy class $\cC \subset \Gal(L/K)$ of $\sigma$. Taking an appropriate sequence of fields gives the correct lower bound. Observing that all of the densities sum to $1$ completes the proof. 
+
+We now give the argument in full detail.
+
+We wish to compute the density of primes $\fkp$ such that $\artin{L/K}{\fkp} = \sigma$. To start, we bring in an auxiliary cyclotomic field extension. Choose a cyclotomic extension $M/K$ such that $M/K$ has an element $\tau$ with $\ord \sigma|\ord \tau$ and $M \cap L = K$. Then, the compositum $F = LM$ is Galois over $K$ with $\Gal(F/K) \cong \Gal(L/K) \times \Gal(M/K)$. Let $\rho = (\sigma, \tau) \in \Gal(F/K)$. Note that $\ord \rho = \ord \tau$ by our choice of $\tau$. Let $E = F^{\rho}$ be the fixed field of $\rho$. Then, $E \cap M = M^{\tau}$. Thus, $[M:E\cap M] = \ord \tau = \ord \rho = [F:E]$ and so $F = EM$. Thus, $F$ is a cyclotomic extension of $E$.
+
+By the Chebotarev density theorem for cyclotomic extensions, the set $Q_1(\rho)$ of primes $\fkq \subset \cO_{E}$ such that $\artin{F/E}{\fkq} = \rho$ has density $\frac{1}{[F:E]}$. Denote by $Q_2(\rho)$ the set of primes $\fkq \subset \cO_{E}$ such that $\artin{F/E}{\fkq} = \rho$ and $\fkq$ has degree $1$ above $\fkp = \fkq \cap K$. Since the sum $\sum \frac{1}{\norm \fkq}$ over all primes of $E$ which do not have degree $1$ above $\fkp$ is bounded by $\sum_{\fkq \text{ ramified}} \frac{1}{\norm \fkq} + [E:K] \sum_{p} \frac{1}{p^2}$, the density of $Q_2$ and $Q_1$ are equal.
+
+Also, if $\fkq \in Q_{2}(\rho)$ and $\fkp = \fkq \cap K$, then $\norm \fkq = \norm \fkp$. It follows immediately that $\rho = \artin{F/E}{\fkq} = \artin{F/K}{\fkp}$. Moreover, any prime $\fkp$ lying under some element of $Q_2(\rho)$ must have exactly $[E:K]$ primes in $Q_{2}(\rho)$ lying over it by the definition of $Q_2(\rho)$. Since elements $\fkq \in Q_{2}(\rho)$ satisfy $\norm_{L} \fkq = \norm_{K}(K \cap \fkq)$, this implies that the set $P_{\rho}$ of primes $\fkp \subset \cO_{K}$ such that $\artin{F/K}{\fkp} = \rho$ has density at least $\frac{1}{[E:K]} \cdot\frac{1}{[F:E]} = \frac{1}{[F:K]}$. 
+
+ Now, if $\fkp \in P_{\rho}$, $\rho(\alpha) = \alpha^{\norm \fkp} \mod \fkP$ for all $\alpha \in F$ for any $\fkP \subset \cO_{F}$ lying over $\fkp$, so $\rho(\alpha) = \alpha^{\norm \fkp} \mod \fkP \cap L$ for all $\alpha \in L$, which implies that the density of $P_{\sigma} = \{\fkp \subset \cO_{K}: \artin{L/K}{\fkp} = \sigma\}$ has density at least $\frac{1}{[F:K]} = \frac{1}{[L:K] \cdot [M:K]}$. 
+ 
+ We have already shown that $P_{\sigma}$ has positive density. To go further, note that we were free to choose any $\tau \in \Gal(M/K)$ so long as $\ord(\sigma)|\ord(\tau)$. For different choices of $\tau$, the sets $P_{1}((\sigma, \tau))$ will be disjoint, so the sums of their densities will also be a lower bound on the density of $P_{\sigma}$.
+ Now, if $\ord \sigma = p_1^{\alpha_1} \cdots p_{k}^{\alpha_{k}}$ and $\Gal(M/K)$ is cyclic of order $p_1^{\beta_1} \cdots p_{\ell}^{\beta_{\ell}}$, the number of elements of of $\Gal(M/K)$ of order a multiple of $\order(\sigma)$ is 
+ \begin{align}
+ (p_1^{\beta_1} - p_{1}^{\alpha_{1} - 1}) \cdots 
+(p_k^{\beta_k} - p_{k}^{\alpha_{k} - 1}) p_{k+1}^{\beta_{k+1}} \cdots p_{\ell}^{\beta_{\ell}} = [M:K] \cdot \prod_{j=1}^{k}(1 - p_{j}^{\alpha_{j} - 1 - \beta_{j}}).
+\end{align}
+Assuming we can construct such an $M$, the density of $P_{\sigma}$ is at least 
+\begin{align}\frac{1}{[L:K]} \cdot \prod_{j=1}^{k}(1 - p_{j}^{\alpha_{j} - 1 - \beta_{j}}).\end{align}
+ Of course, by Dirichlet's theorem on primes in arithmetic progressions, i.e. the special case of the Chebotarev density theorem for the cyclotomic extension $\bbQ(\zeta_{m})/\bbQ$, there are infinitely many primes $p$ such that $p \equiv 1 \pmod{m}$ for any $m = \prod_{j} p_{j}^{\beta_{j}}$. For any sufficiently large such $p$, $K(\zeta_{p}) \cap L = K$ and $\Gal(K(\zeta_{p})/K) \cong (\bbZ/p\bbZ)^\times \cong \bbZ/(p-1)\bbZ$. Thus, we can choose a sequence of such fields $M = K(\zeta_{p})$ so that the $\beta_{j}$ get arbitrarily large. Thus, the Dirichlet density of $P_{\sigma}$ is at least $\frac{1}{[L:K]}$.
+ This argument applies to all $\sigma \in \Gal(L/K)$, the $P_{\sigma}$ are disjoint, and the total Dirichlet density is $1$, so in fact, the Dirichlet density of $P_{\sigma}$ is exactly $\frac{1}{[L:K]}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:ChebotarevInDirichletDensity} for Finite Galois Extensions.] 
+For this section, we depart from \cite{FriedJarden08}, which gives a more combinatorial argument reducing the proof to the case of cyclic extensions in favor of the representation theory based argument in Section 4 of \cite{LagariasOdlyzko77}. The general case follows from the cyclic case by the representation theory of finite groups. Given a finite Galois extension $\Gal(L/K)$ and a conjugacy class $\cC \subset \Gal(L/K)$, pick some $\sigma \in \cC$ and let $E = L^{\sigma}$ be the fixed field of $\sigma$. Then, $\Gal(L/E) = \langle \sigma \rangle$ is the cyclic subgroup of $\Gal(L/K)$ generated by $\sigma$. Orthogonality of characters implies that for $\tau \in \Gal(L/K)$, 
+\begin{align}
+ \sum_{\phi, \text{ char. of } \Gal(L/K)} \overline{\phi(\sigma)} \phi(\tau) = \sum_{\chi \in \widehat{\Gal(L/E)}} \overline{\chi(\sigma)} \trace \Ind_{\langle \sigma \rangle}^{\Gal(L/K)}\chi(\tau) = \begin{cases}\frac{\# \Gal(L/K)}{\# \cC}, & \tau \in \cC, \\ 0, & \tau \notin \cC. \end{cases} 
+\end{align}
+By \eqref{eqn:ArtinLogFormula}, absorbing the finitely many ramified primes and the contribution from $m \geq 2$ into an $O(1)$ term as before, we have that for any $\sigma \in \cC$, 
+\begin{align} \label{eqn:startGeneralCaseComputationDD}
+\sum_{\fkp \subset \cO_{K}: \artin{L/K}{\fkp} = \cC} (\norm \fkp)^{-s} + O(1) & = -\frac{\# \cC}{\# \Gal(L/K)} \sum_{\phi, \text{ char. of } \Gal(L/K)} \overline{\phi(\sigma)} \log L_{L/K}(s, \phi) \nonumber \\
+&  = -\frac{\# \cC}{\# \Gal(L/K)} \sum_{\chi \in \widehat{\Gal(L/E)}} \overline{\chi(\sigma)} \log L_{L/K}(s, \trace \Ind_{\Gal(L/E)}^{\Gal(L/K)}\chi). 
+\end{align}
+Now, it is not hard to check by Mackey's Theorem in the unramified case and an explicit computation in the case of ramification that $L_{L/K}(s, \Ind_{\Gal(L/E)}^{\Gal(L/K)}\chi) = L_{L/E}(s, \chi)$, (see, for example Section 2.5.7. of \cite{Snyder02}). Continuing from \eqref{eqn:startGeneralCaseComputationDD},
+\begin{align}
+\sum_{\fkp \subset \cO_{K}: \artin{L/K}{\fkp} = \cC} (\norm \fkp)^{-s} + O(1) & = -\frac{\# \cC}{\# \Gal(L/K)} \sum_{\chi \in \widehat{\Gal(L/E)}} \overline{\chi(\sigma)} \log L_{L/E}(s, \chi) \nonumber \\
+& = \frac{\# \cC \cdot \#\Gal(L/E)}{\# \Gal(L/K)}\sum_{\fkq \subset \cO_{E}: \artin{L/E}{\fkq} = \sigma} (\norm \fkq)^{-s} + O(1),
+\end{align}
+as $s \to 1^{+}$.
+Since the class $\{\sigma\}$ has density $\frac{1}{\#\Gal(L/E)}$ in $P_{E}$ and also,
+\begin{align}
+\sum_{\fkp \subset \cO_{K}} (\norm \fkp)^{-s} = \sum_{\fkq \subset \cO_{E}} (\norm \fkq)^{-s} + O(1) \to \infty,
+\end{align}
+as $s \to 1^+$, we see that the Dirichlet density of primes $\fkp \subset \cO_{K}$ with $\artin{L/K}{\fkp} = \cC$ is $\frac{\# \cC \cdot \#\Gal(L/E)}{\# \Gal(L/K)} \cdot \frac{1}{\#\Gal(L/E)} = \frac{\# \cC}{\# \Gal(L/K)}$, which completes the proof of the Chebotarev density theorem for Dirichlet density.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{``Effective'' Chebotarev for Natural Density} \label{sec:EffectiveChebotarev}
+
+For many applications of the Chebotarev density theorem, Theorem \ref{thm:ChebotarevInDirichletDensity} is sufficient. In particular, if the end-user's goal is simply to prove the infinitude of some set of primes, there is no need to cite a full-strength Chebotarev. However, if one requires a prime (or many primes) of relatively low norm in some ideal class, error bounds given in terms of numerical invariants of the fields are very useful. This is exactly what Theorems \ref{thm:LOEffectiveConditional} and \ref{thm:LOEffectiveUnconditional}, proved by Lagarias and Odlyzko in \cite{LagariasOdlyzko77} and refined by Serre in \cite{Serre81}, provide. While these theorems did not give the world record bound on the lowest norm prime in an ideal class, (the record at the time still belonging to Lagarias and Odlyzko with the addition of Montgomery \cite{LagariasMontgomeryOdlyzko79}), they were still the first example of a proof of the Cebotarev density theorem with an explicit, effectively computable error term. We follow Lagarias and Odlyzko's extremely clear presentation of the proof from their original paper \cite{LagariasOdlyzko77}, omitting all but a select few particularly instructive details.
+
+The outline of the proof could almost be read out of Davenport's ``Multiplicative Number Theory'' \cite{Davenport00}, although there are a few additional wrinkles. (In particular, there will be some inputs from class field theory and representation theory. The error terms will also be more complicated). The general argument goes as follows:
+\begin{enumerate}
+\item Compare $\psi_{\cC}(x, L/K) := \sum_{\underset{\fkp \text{ unramified}}{\norm \fkp^{m} \leq x, \artin{L/K}{\fkp}^{m} = \cC}} \log(\norm \fkp)$ to a truncated inverse Mellin tranform of a character-weighted linear combination of the logarithms of Artin $L$-functions.
+\item Use an argument as in the proof of Theorem \ref{thm:ChebotarevInDirichletDensity} for finite Galois extensions at the end of Section \ref{sec:ChebForDD} to replace the Artin $L$-functions associated to $L/K$ with Artin $L$-functions associated to a cyclic extension $L/E$ (which are then Dirichlet-Hecke $L$-functions by class field theory).
+\item Use the functional equation and Hadamard product formula of the $L$-functions in question and the inequality $3 + 4 \cos \theta + \cos 2\theta \geq 0$ to prove a zero-free (or nearly zero-free) region for $\zeta_{L}(s) := \prod_{\chi} L_{L/E}(s,\chi)$. Alternately, assume the generalized Riemann hypothesis for $\zeta_{L}$.
+\item Use the functional equation and Hadamard product to bound the number of non-trivial zeros of the $L$-functions with imaginary part between $t-1$ and $t+1$.
+\item Shift the line of integration from the truncated inverse Mellin transform to the left to get an explicit formula for $\psi_{\cC}(x,L/K)$ with main term $x \cdot \# C/\# \Gal(L/K)$ and with the error term depending on a sum over zeros of $L$-functions.
+\item Put everything together and choose an appropriate value of $T$ (the value at which the Mellin transform was truncated) to balance error terms. The result is an estimate for $\psi_{\cC}(x, L/K)$ with effective error terms.
+\item Use summation by parts to prove the corresponding result for $\pi_{\cC}(x, L/K)$.
+\end{enumerate}
+
+
+We now give a more detailed outline, filling in some details that Lagarias and Odlyzko leave unproven and including most of the key equations.
+We move quickly through the first couple of steps.
+
+Orthogonality of characters and \eqref{eqn:ArtinLogDerFormula} imply (3.5) and (3.6) of \cite{LagariasOdlyzko77}, which state that for any $\tau \in \cC$,
+\begin{align}
+F_{\cC}(s) := -\frac{\# \cC}{\# \Gal(L/K)} \sum_{\phi \text{ char. of } \Gal(L/K)} \overline{\phi(\tau)} \frac{L'_{L/K}}{L_{L/K}}(s, \phi) 
+= \sum_{\fkp \subset \cO_{K}} \sum_{m=1}^{\infty}\theta(\fkp^{m})\log(\norm \fkp)(\norm \fkp)^{-ms},
+\end{align}
+where $\theta(\fkp^{m})$ is an indicator function for $\artin{L/K}{\fkp}^{m} = \cC$ if $\fkp$ does not ramify in $L$ and takes values in $[0,1]$ if $\fkp$ ramifies in $L$.
+
+Let $\sigma_{0} = 1 + 1/\log x$ and let
+\begin{align}
+I_{\cC}(x,T) := \frac{1}{2\pi i} \int_{\sigma_{0} - iT}^{\sigma_0 + iT} F_{\cC}(s) \frac{x^{s}}{s} ds
+\end{align}
+be the truncated inverse Mellin transform of $F_{\cC}(s)$.  $\psi_{\cC}(x)$ is the sum up to norm $x$ of the coefficients of $F_{\cC}(s)$, with the ramified primes omitted. Serre shows in Sections 1.3. and 2.4. of \cite{Serre81} that
+\begin{align}
+\sum_{\underset{\fkp \text{ ramified in } L/K}{\fkp \subset \cO_{K}, m: (\norm \fkp)^{m} \leq x}} \log \norm \fkp \leq 2 \log x \sum_{\underset{\fkp \text{ ramified in } L/K}{\fkp \subset \cO_{K}}} \log \norm \fkp \leq \frac{4}{\#\Gal(L/K)} \log x \log d_{L},
+\end{align}
+which gives an upper bound on the error term resulting from the unramified primes. 
+Applying the same strategy for bounding the error term from the Mellin transform as in \cite{Davenport00}'s proof of Dirichlet's theorem yields the improved version of (3.10) and (3.18) of \cite{LagariasOdlyzko77}, 
+\begin{align}
+\left|\psi_{\cC}(x) - I_{\cC}(x,T)\right| \ll \frac{\log x \log d_{L}}{\# \Gal(L/K)} + n_{K} \log x + n_{K} \frac{x}{T} (\log x)^2.
+\end{align}
+
+Now, the same argument as in the reduction of Theorem \ref{thm:ChebotarevInDirichletDensity} to the case of cyclic extensions shows that we may replace the sum $\sum_{\phi \text{ char. of } \Gal(L/K)} \overline{\phi(\tau)} \frac{L'_{L/K}}{L_{L/K}}(s,\phi)$ in the definition of $F_{\cC}(s)$ with $\sum_{\chi \in \widehat{\Gal(L/E)}} \overline{\chi(\tau)} \frac{L'_{L/E}}{L_{L/E}}(s,\chi)$, where $E$ is the fixed field of $\tau$. 
+
+We now ``recall'' some facts about the $L_{L/E}(s,\chi)$.
+The $L$-functions $L_{L/E}(s,\chi)$ have a completed $L$-function $\xi_{L/E}(s,\chi)$. $\xi_{L/E}$ has a functional equation $\xi_{L/E}(1-s, \overline{\chi}) = W(\chi) \xi_{L/E}(s,\chi)$. Also, $\xi_{L/E}$, is entire of order $1$. If $\xi_{L/E}$ is non-vanishing in $s \geq 1$, then $\xi_{L/E}$ has a Hadamard product. Indeed, this is the case:
+
+\begin{prop} \label{prop:EasyZeroFreeRegion}
+$L_{L/E}(s,\chi)$ has no zeros in $\sigma \geq 1$. Hence the zeros of $\xi_{L/E}(s,\chi)$ lie in the critical strip $\{0 < \re(s) < 1\}$. 
+\end{prop}
+
+\begin{proof}
+To show the result for $L_{L/E}(s,\chi)$, it suffices to prove the proposition for $\zeta_{L}(s)$, where 
+\begin{align}
+\zeta_{L}(s):= \prod_{\chi \in \widehat{\Gal(L/E)}}L_{L/E}(s,\chi) = \prod_{\fkP \subset \cO_{L}} \frac{1}{1 - (\norm \fkP)^{-s}} = \sum_{0 \neq \fkA \subset \cO_{L}} (\norm \fka)^{-s}.
+\end{align}
+From the last expression, $\zeta_{L}(s)$ is clearly positive %The logarithmic derivative $\frac{\zeta_{L}'}{\zeta_{L}}(s) = -\sum_{\fkP \subset \cO_{L}}\sum_{m=1}^{\infty}(\norm \fkP)^{-ms}$ is clearly negative
+ for all $s \in \bbR$ with $s > 1$ and has a simple pole with residue $1$ at $s = 1$. Then, since $3 + 4 \cos \theta + \cos 2\theta \geq 0$, for any $\sigma > 1, t \in \bbR$, taking the Taylor expansion of $-\log(1-\norm \fkP)$ for each $\fkP \subset \cO_{L}$,
+\begin{align}
+\re\left[3 \log \zeta_{L}(\sigma) + 4 \log \zeta_{L}(\sigma + it) + \log\zeta_{L}(\sigma + 2it)\right] \geq 0,
+\end{align}
+and so $|\zeta_{L}(\sigma)^3 \zeta_{L}(\sigma + it)^4 \zeta_{L}(\sigma + 2it)| \geq 1$. Now, for $\sigma = 1, t = 0$, $\zeta_{L}(\sigma + it)$ has a pole and so is clearly non-zero. For $t \neq 0$, if $\zeta_{L}(1 + it) = 0$, then $\lim_{\sigma \to 1^{+}} \zeta_{L}(\sigma)^3 \zeta_{L}(\sigma + it)^4  = 0$. Also, $\zeta_{L}(\sigma + 2it)$ does not have a pole, so the whole product tends to zero. But this contradicts that the product has magnitude at least $1$, so $\zeta_{L}(\sigma + it)$ cannot have a zero with $\sigma \geq 1$.
+
+The statement about $\xi_{L/E}(s\chi)$ follows immediately from the functional equation.
+\end{proof}
+
+ The logarithmic derivative of the Hadamard product for $\xi_{L/E}$ yields
+\begin{align} \label{eqn:logDerHadamard}
+\frac{L'_{L/E}}{L_{L/E}}(s, \chi) = B(\chi) + \sum_{\rho: L_{L/E}(\rho,\chi) = 0}\left(\frac{1}{s-\rho} + \frac{1}{\rho}\right) - \frac{1}{2} \log A(\chi) - \delta_{\chi_{0}}(\chi)\left(\frac{1}{s} + \frac{1}{s-1}\right) - \frac{\gamma_{\chi}'}{\gamma_{\chi}}(s),
+\end{align}
+where $A(\chi)$ is the product of $d_{E}$ with the norm of the conductor of $\chi$, $B(\chi)$ is some constant depending on $\chi$, and $\gamma_{\chi}$ is a certain product of powers of $\pi$ and Gamma functions coming from the infinite places.
+
+We can now improve the zero-free region from Proposition \ref{prop:EasyZeroFreeRegion} by observing that the functional equation of $\xi_{L/E}(s,\chi)$ implies
+\begin{align} \label{eqn:logDerHadamardFnEqn}
+\sum_{\rho}\left(\frac{1}{s-\rho} + \frac{1}{s - \overline{\rho}}\right)
+= \log A(\chi) + 2\delta_{\chi_{0}}(\chi)\left(\frac{1}{s} + \frac{1}{s-1}\right) + 2 \frac{\gamma_{\chi}'}{\gamma_\chi}(s) - \frac{L_{L/E}'}{L_{L/E}}(s, \chi) - \frac{L_{L/E}'}{L_{L/E}}(s, \overline{\chi}).
+\end{align}
+
+Summing over all $\chi\in \widehat{\Gal(L/E)}$ and applying a refined version of the argument in Proposition \ref{prop:EasyZeroFreeRegion} with $\frac{\zeta_{L}'}{\zeta_{L}}$ in place of $\log \zeta_{L}$, gives the following zero-free and ``almost'' zero-free regions, which we state without proof.
+
+\begin{lem}[Lemma 8.1. of \cite{LagariasOdlyzko77}]
+There is an effectively computable positive absolute constant $c$ such that $\zeta_{L}(s)$ has no zeros $\rho$ in the region
+\begin{align}
+|\im(\rho)| \geq \frac{1}{1 + 4 \log d_{L}}, \ \ |\re(\rho)| \geq 1 - \frac{c}{\log d_{L} + n_{L} \log(|\im(\rho)| + 2)}.
+\end{align}
+\end{lem}
+
+\begin{lem}[Lemma 8.2. of \cite{LagariasOdlyzko77}]
+If $n_{L} > 1$, $\zeta_{L}(s)$ has at most one zero $\rho$ in the region
+\begin{align}
+|\im(\rho)| \geq \frac{1}{4 \log d_{L}}, \ \ |\re(\rho)| \geq 1 - \frac{1}{4\log d_{L}}.
+\end{align}
+If such a zero exists, it is real, simple, and comes from $L_{L/E}(s, \chi)$ for a real character $\chi$.
+\end{lem}
+
+Another important consequence of \eqref{eqn:logDerHadamardFnEqn} and the functional equation of $\xi_{L/E}(s,\chi)$ is Lemma \ref{lem:NumZerosInStrip}, which bounds the number of zeros in a thin strip.
+
+\begin{lem}[Lemma 5.4. of \cite{LagariasOdlyzko77}] \label{lem:NumZerosInStrip} 
+Let $n_{\chi}(t)$ be the number of zeros of $L_{L/E}(s, \chi)$ with imaginary part in the interval $[t-1,t+1]$ and real part in $(0,1)$.  For all $t$, $n_{\chi}(t) \ll \log A(\chi) + n_{E} \log (|t| + 2)$.
+\end{lem}
+\begin{proof}
+At $s = 2 + it$,  $\left|\frac{\gamma_{\chi}'}{\gamma_\chi}(s)\right| \ll n_{E} \log(|t| + 2)$,  $\left|\frac{L_{L/E}'}{L_{L/E}}(s, \chi)\right|\leq -\frac{\zeta_{E}'}{\zeta_{E}}(2) \ll n_{E}$, and $\frac{1}{s}$ and $\frac{1}{s-1}$ are both $O(1)$. Taking the real part of both sides of \eqref{eqn:logDerHadamardFnEqn} yields 
+\begin{align} \label{eqn:boundSumOfRealParts}
+\sum_{\rho} \re\left(\frac{1}{2 + it -\rho} + \frac{1}{2 + it - \overline{\rho}}\right) \ll \log A(\chi) + n_{E}\log(|t| + 2),
+\end{align}
+where we omit the absolute value on the left-hand side since every term is positive.
+Now, if $|\im(\rho) - t| < 1$ and $0 < \re(\rho) < 1$,  $\re\left(\frac{1}{2 + it -\rho} + \frac{1}{2 + it - \overline{\rho}}\right) \geq \frac{1}{5}$, so the left hand side of \eqref{eqn:boundSumOfRealParts} is $\gg n_{\chi}(t)$.
+\end{proof}
+This has the important consequence that the mysterious constant $B(\chi)$ satisfies 
+\begin{align} \label{eqn:EstimateBChi}
+B(\chi) + \sum_{\rho: |\rho| < 1/2} \frac{1}{\rho} \ll \log A(\chi) + n_{E}.
+\end{align}
+See Lemma 5.5. of \cite{LagariasOdlyzko77} for a slightly more general statement and proof.
+
+The next step is to use these bounds to show that if $U> 1$ is a positive half-integer and $\Pi(U,T)$ is the path given by concatenating the straight lines from $\sigma_{0} + iT$ to $-U + iT$ to $-U - iT$ to $\sigma_{0} - iT$, then
+\begin{align} \label{eqn:Bound the rest}
+\frac{1}{2\pi i}\int_{\Pi(U,T)} \frac{x^{s}}{s} \frac{L'_{L/E}}{L_{L/E}}(s,\chi) \ll \frac{x\log x}{T}(\log A(\chi) + n_{E}\log T)+ \frac{Tx^{-U}}{U}(\log A(\chi) + n_{E} \log(T +U)).
+\end{align}
+The first term comes from the horizontal integrals and the second term comes from the vertical integrals. The only difficulty is bounding the contribution of the horizontal integrals near the critical strip. For this, it is helpful to compare the values of $\frac{L'_{L/E}}{L_{L/E}}(\sigma + it, \chi)$ and $\frac{L'_{L/E}}{L_{L/E}}(3 + it, \chi)$ to estimate $\frac{L'_{L/E}}{L_{L/E}}(s,\chi)$ by $\sum_{\rho: |\im(s - \rho) < 1|}\frac{1}{s - \rho}$ within a $\log(A(\chi)) + n_{E} \log(|t| + 2)$ error term.
+
+Now, the Cauchy integral formula and \eqref{eqn:Bound the rest} imply that 
+\begin{align}
+ \frac{1}{2\pi i} \int_{\sigma_{0} - iT}^{\sigma_{0} + iT} \frac{x^{s}}{s} \frac{L'_{L/E}}{L_{L/E}}(s,\chi) =\sum_{\underset{\nu \in [-U, \sigma_{0}] + i[-T, T],}{\nu \text{ poles of }\frac{x^{s}}{s} \cdot \frac{L'_{L/E}}{L_{L/E}}(s,\chi)}} \residue_{\nu}\left(\frac{x^{s}}{s} \frac{L'_{L/E}}{L_{L/E}}(s,\chi)\right) + \cE,
+\end{align}
+with error term $\cE$ as in \eqref{eqn:Bound the rest}. There are four sources for poles of $\frac{x^{s}}{s} \frac{L'_{L/E}}{L_{L/E}}(s,\chi)$: 
+\begin{enumerate}
+\item The non-trivial zeros of $L_{L/E}(s,\chi)$. Each contributes a residue $\frac{x^{\rho}}{\rho}$ (counting zeros with multiplicity).
+\item The trivial zeros of $L_{L/E}(s,\chi)$ at negative integers $ > U$. The residue at $-k$ is $-a_{k \pmod{2}}(\chi)\frac{x^{-k}}{k}$, where $a_{k \pmod{2}}(\chi)$ depends only on the parity of $k$ and $\gamma_{E}(\chi)$.
+\item The possible pole of $\frac{L'_{L/E}}{L_{L/E}}(s,\chi)$ at $1$ which contributes the residue $- \delta_{\chi_{0}}(\chi)x$.
+\item The pole of $\frac{x^{s}}{s}$ and possible pole of $\frac{L'_{L/E}}{L_{L/E}}(s,\chi)$ at $0$. The residue here is some $R(\chi)$,  which can be shown to satisfy
+\begin{align}
+\left|R(\chi) - \sum_{\rho: |\rho| < \frac{1}{2}}\frac{1}{\rho} \right| \ll \log A(\chi) + n_{E} \log(x),
+\end{align}
+by applying \eqref{eqn:EstimateBChi} and easy estimates on the size of $\frac{L'_{L/E}}{L_{L/E}}(s,\chi)$ and $\frac{\gamma_{E}'}{\gamma_{E}}(s,\chi)$. (Note that our notation departs a bit from \cite{LagariasOdlyzko77} here. In particular, \cite{LagariasOdlyzko77} breaks this term down further before deriving the bound.)
+\end{enumerate}
+
+Taking the limit as $U \to \infty$, summing these terms over $\chi \in \widehat{\Gal(L/E)}$, (weighted by $\overline{\chi(\tau)}$ of course), and applying the identity $n_{L} = [L:E]\cdot n_{E}$ and the conductor-discriminant formula $\sum_{\chi} \log A(\chi) = \log d_{L}$, we arrive at Theorem \ref{thm:BoundWithSxT}.
+\begin{thm}[Theorem 7.1 of \cite{LagariasOdlyzko77}] \label{thm:BoundWithSxT}
+Suppose $x \geq 2$ and $T \geq 2$. Define
+\begin{align}
+S(x,T) = \frac{\# \cC}{\#\Gal(L/K)} \sum_{\chi \in \widehat{\Gal(L/E)}} \overline{\chi(\tau)} \left( \sum_{\rho: |\im(\rho)| < T} \frac{x^{\rho}}{\rho} - \sum_{\rho: |\rho| < \frac{1}{2}} \frac{1}{\rho}\right),
+\end{align}
+where the sums are over zeros of $\zeta_{L}(s)$. Then,
+\begin{align} \label{eqn:MessyApproximationForPsiC}
+ \left|\psi_{\cC}(x, L/K) - \frac{\# \cC}{\#\Gal(L/K)} x\right| & \ll  |S(x,T)| +  \frac{\log x \log d_{L}}{\# \Gal(L/K)} + \frac{n_{L}}{\#\Gal(L/K)}\frac{x (\log x)^2}{T}
+ \nonumber \\
+  & +  \frac{\# \cC}{\# \Gal(L/K)} \left( \frac{x \log x  + T}{T} \log d_{L} + n_{L} \log x + \frac{n_{L} x \log x \log T}{T}\right)
+\end{align}
+\end{thm}
+
+We are now ready to prove Theorem \ref{thm:LOEffectiveConditional}.
+\begin{proof}[Proof of Theorem \ref{thm:LOEffectiveConditional}].
+Under GRH for $\zeta_{L}(s)$,
+\begin{align}
+\left| \sum_{\rho: |\im(\rho)| < T} \frac{x^{\rho}}{\rho} - \sum_{\rho: |\rho| < \frac{1}{2}} \frac{1}{\rho}\right| & = \left| \sum_{\rho: |\im(\rho)| < T} \frac{x^{\rho}}{\rho}\right| \leq x^{1/2} \sum_{\rho: |\im(\rho)| < T} \frac{1}{|\rho|} \nonumber \\
+ & \ll x^{1/2} \sum_{t=1}^{T} \frac{\sum_{\chi \in \widehat{\Gal(L/E)}} n_{\chi}(t)}{t}  \ll x^{1/2} \log T \left(\log d_{L} + n_{L} \log T\right).
+\end{align}
+Taking $T \sim x^{1/2}$ to balance the error terms in \eqref{eqn:MessyApproximationForPsiC} yields 
+\begin{align}\label{eqn:NicerApproximationForPisC}
+ \left|\psi_{\cC}(x, L/K) - \frac{\# \cC}{\# \Gal(L/K)} x\right| \ll \frac{\# \cC}{\# \Gal(L/K)}x^{1/2} \log(d_{L}x^{n_{L}}) (\log x).
+\end{align}
+Removing the terms for $\artin{L/K}{\fkp}^{m} = \cC$ for $m \geq 2$ from $\psi_{\cC}(x, L/K)$ introduces an error term of at most $n_{K} x^{1/2}$ since
+\begin{align}
+\sum_{\fkp, m\geq 2: \norm_{K/\bbQ}(\fkp)^{m} \leq x} \log \norm_{K/\bbQ} \fkp \leq n_{K} \sum_{p, m: p^{m} \leq x} \log p \ll n_{K} x^{1/2}.
+\end{align}
+ In particular, if we write $\psi'_{\cC}(x,L/K)$ for the sum $\psi_{\cC}(x,L/K)$ with the $m \geq 2$ terms removed, then \eqref{eqn:NicerApproximationForPisC} also holds for $\psi_{\cC}'(x,L/K)$. Denoting the error term by $R(x)$, and integrating by parts,
+\begin{align}
+\pi_{\cC}(x, L/K) & = \int_{2}^{x} \frac{d\psi_{\cC}'(n, L/K)}{\log n} \nonumber \\
+                  & = \frac{\# \cC}{\# \Gal(L/K)} \frac{x}{\log x} + \frac{R(x)}{\log x}  - \frac{\# \cC}{\# \Gal(L/K)} \int_{2}^{x} \frac{dn}{\log^2 n} - \int_{2}^{x} \frac{R(n)dn }{n\log^2 n} \nonumber \\
+                  & = \frac{\# \cC}{\# \Gal(L/K)} \int_{2}^{x} \frac{dt}{\log t} + O\left(\frac{\# \cC}{\# \Gal(L/K)} x^{1/2} \log(d_{L}x^{n_{L}})\right) - \int_{2}^{x} \frac{R(n)dn }{n\log^2 n}. \label{eqn:PiCAlmostThere}
+\end{align}
+Since $\int_{2}^{x} \frac{(\log d_{L}n^{n_{L}})}{n^{1/2}\log n} = O\left(\frac{\# \cC}{\# \Gal(L/K)} x^{1/2} \log(d_{L}x^{n_{L}})\right)$, \eqref{eqn:PiCAlmostThere} implies Theorem \ref{thm:LOEffectiveConditional}. 
+\end{proof}
+
+A similar argument (dealing with the more complicated zero-free region) can be used to prove \ref{thm:LOEffectiveUnconditional}.
+
+\section{Applications of the Chebotarev Density Theorem} \label{sec:Applications}
+
+To conclude, we give several interesting applications of the Chebotarev density theorem, chosen to highlight some of the different ways this theorem can be used.
+
+Our first example demonstrates perhaps the most obvious application of Chebotarev -- showing that a certain set of primes is infinite. This example, described by Serre in \cite{Serre03} uses Chebotarev to translate a group-theoretic theorem of Jordan into a number theory statement.
+\begin{thm}
+Let $f$ be an irreducible degree $n \geq 2$ polynomial with coefficients in $\bbZ$. Let $P_{0}(f)$ be the set of primes such that $f$ has no zeros in the finite field $\bbF_{p}$. $P_{0}(f)$ has positive density $ \geq \frac{1}{n}$ with strict inequality when $n$ is not a prime power.
+\end{thm}
+
+\begin{proof}
+We require some group theoretic input, which we state without proof.
+\begin{thm}[Jordan \cite{Jordan72}, Cameron and Cohen \cite{CameronCohen92}] \label{thm:JordansTheorem}
+Let $G$ be a group acting transitively on a set $X$ with $n \geq 2$ elements. Let $G_{0} = \{g \in G: g\cdot x \neq x \forall x \in X\}$. Then, $G_{0} \neq \emptyset$. More precisely, $\frac{\# G_{0}}{\# G} \geq \frac{1}{n}$, with equality possible only when $\# G$ is a power of a prime.
+\end{thm}
+Let $L = \bbQ[\alpha_{1}, \dots, \alpha_{n}]$, where $\alpha_{1}, \dots, \alpha_{n}$ are the roots of $f \in \overline{Q}$. $L$ is Galois over $\bbQ$. Our strategy is to apply this result and Chebotarev with $G = \Gal(L/\bbQ)$ and for $\cC$ ranging over all conjugacy classes contained in $G_{0}$.
+
+Note that $\Gal(L/\bbQ)$ acts transitively on the $n$-element set of roots of $f$ in $L$. For any prime $p$ which is unramified in $L$ and does not divide the leading coefficient of $f$, the degrees of the polynomials in the factorization of $f$ over $\bbF_{p}$ give the cycle type of $\sigma = \artin{L/\bbQ}{p}$ viewed as an element of $S_{n}$ via the action on the $n$ roots. Since the number of fixed points of a permutation is invariant under conjugation, the set $G_{0} \subset \Gal(L/\bbQ)$ of fixed-point free permutations is a (disjoint) union of conjugacy classes in $\Gal(L/\bbQ)$. So,
+\begin{align}
+P_{0}(f) \overset{\cdot}{=} \left\{ p: \artin{L/\bbQ}{p} \in G_{0}\right\}, \ \ \text{ up to a finite set of primes}.
+\end{align}
+Applying the Chebotarev density theorem to the conjugacy classes $\cC \subset G_{0}$, together with Cameron and Cohen's refinement of Jordan's theorem, we see that $P_{0}(f)$ has density $\geq 1/n$ (with strict inequality if $n$ is not a power of $p$).
+\end{proof}
+
+We briefly remark that this application did not actually require the full power of the Chebotarev density theorem, but follows from an easier theorem of Frobenius dating back to 1880. In our notation above, Frobenius's theorem states that the density of primes $p$ for which $f$ factors as a product of degree $d_1, d_2, \dots, d_t$ polynomials is proportional to the number of elements of $\Gal(L/\bbQ)$ which at on $\{\alpha_{1}, \dots, \alpha_{n}\}$ with cycle type $d_1, d_2, \dots, d_t$. See \cite{StevenhagenLenstra96} for a historical context and numerical examples exhibiting Frobenius's theorem.
+
+Another application of this flavor shows that the set of primes (in $\bbZ$) represented by the primitive positive definite quadratic form $ax^2 + bxy + cy^2$ is positive and can be computed in terms of the discriminant and symmetries of the form. The proof applies the Chebotarev density theorem for a certain dihedral Galois extension depending on the quadratic form. For details, see Theorem 9.12. of \cite{CoxPrimes}.
+
+The Chebotarev density theorem can also help to prove the infinitude of some set of primes even when the set of primes cannot be shown to have positive density. As one step in Elkies's proof that every elliptic curve over $\bbQ$ has infinitely many supersingular primes \cite{Elkies87}, Elkies used Dirichlet's theorem to find an additional supersingular prime outside of any finite set of supersingular primes. It seems possible that a similar argument using the full power of Chebotarev could prove the infinitude of some other set of primes.
+
+As our next application, we show how the Chebotarev density theorem can be used to show that two pieces of data determine each other. The idea is to use Chebotarev to produce an infinite set of primes and then to use a local-to-global theorem to say that the behavior of some data at an infinite set of primes determines the data globally. The prototypical example of such a result is the fact that $x \in \bbQ$ satisfies $x = 0$ if and only if $x \equiv 0 \pmod{p}$ for infinitely many primes $p$. We closely follow the treatment in \cite{CoxPrimes}, although we strengthen the statement of the theorem. The result, which says that a Galois extension is determined by the primes that split completely, is important for the study of ray class fields.
+
+\begin{thm}[8.19 of \cite{CoxPrimes}]
+Let $K$ be a number field and let $L$ and $M$ be Galois extensions of $K$. Let 
+\begin{align*}
+\cP_{L/K} := \{\fkp \subset \cO_{K} \text{ prime}: \fkp \text{ splits completely in } L\}.
+\end{align*}
+Then, $L = M$ if and only if there exist density zero sets of primes $\Sigma_1$ and $\Sigma_2$ such that $\cP_{L/K} \cup \Sigma_1 = \cP\cup \Sigma_2$.
+\end{thm}
+
+\begin{proof}
+By interchanging the roles of $L$ and $M$, it suffices to prove $L \subset M$ if and only if there exists a density zero $\Sigma$ such that $\cP_{M/K} \subset \cP_{L/K} \cup \Sigma$. If $L \subset M$, this is clear.
+Suppose $\cP_{M/K} \subset \cP_{L/K} \cup \Sigma$.
+Let $N$ be the normal closure of $L\cdot M$ over $K$, so $N/K$ is Galois and contains $L$ and $M$. Galois theory says that it is enough to show that any $\sigma \in \Gal(N/M)$ fixes $L$.
+
+Given $\sigma \in \Gal(N/M) \subset \Gal(N/K)$, by the Chebotarev density theorem there are infinitely many primes $\fkp$ of $K$  with $\sigma \in \artin{N/K}{\fkp}$. Since $\sigma$ fixes $M$, $\artin{M/K}{\fkP \cap M} = \id$, whence $\fkP \cap M$ splits completely over $\fkp$. In particular, $\fkp \in \cP_{M/K}$. Then, for infinitely many primes, $\fkp \in \cP_{L/K}$. Now, $\alpha^{\norm \fkp} \cong \sigma(\alpha) \pmod{\fkP}$ for all $\alpha \in N$ implies that $\alpha^{\norm \fkp} \cong \sigma|_{L}(\alpha) \pmod{\fkP \cap L}$ for all $\alpha \in L$, so $\sigma|_{L} = \artin{N/K}{\fkP}|_{L} =\artin{L/K}{\fkP \cap L} =  \id_{L}$ since $\fkp \in \cP_{L/K}$.
+
+We could increase the density hypothesis to a small positive number given a bound on the degree over $K$ of the Galois closure of the compositum of $L$ and $M$ in terms of the extensions $L/K$ and $M/K$. For instance, the result still holds if we replace the hypothesis that $\Sigma_{1}$ and $\Sigma_{2}$ have density zero by the hypothesis that $\Sigma_{1}$ and $\Sigma_{2}$ have density strictly less than $\frac{1}{([L:K] \cdot [M:K])!}$ since the relative degree of the compositum is at most the product of the relative degrees of the base fields and the relative degree of the Galois closure is at most the factorial of the relative degree of the original extension.
+\end{proof}
+
+Our third application relates to the computational problem of determining the Galois group of $L/K$, or at least its cycle structure. By computing the Artin symbol at various primes, the Chebotarev density theorem says that we will eventually find an element of every conjugacy class. The ``effective'' versions of the Chebotarev density theorem give a bound which provides a guarantee that we will find a representative of each class after some finite computation of known length. Moreover, the effective bounds, together with a bound of the size of the Galois group can allow us to exactly determine the size of the group and the conjugacy classes. This still isn't enough to pin down the group, but is a good place to start. See the introduction to \cite{LagariasOdlyzko77} for a bit more discussion.
+
+Serre provided another important class of applications of the Chebotarev density theorem in \cite{Serre81}. Even though the Chebotarev density theorem gives a result that certain sets of primes have positive density, it can be used to give better upper bounds on the sizes of certain sets of density zero primes, particularly when dealing with infinite Galois groups. Assuming I understand the French correctly, in section 4 of \cite{Serre81},  for $\cG$ a compact $\ell$-adic Lie group of $M$-dimension $N \geq 1$, $\cC$ a closed subset of $\cG$ with $M$-dimension $\leq d$ that is stable under conjugation, and a representation $\rho: \Gal(E/K) \to \cG$ of an infinite Galois extension, Serre defines the counting function $\pi_{\cC}(x)$ to be the number of prime ideals $\fkp \subset \cO_{K}$ of norm less than or equal to $x$ such that $\fkp$ is unramified in $E$ and  $\rho\left(\artin{E/K}{\fkp}\right)$ (once it is appropriately defined for an infinite Galois extension) lies in $\cC$. Serre shows that $\pi_{\cC}(x)$ satisfies
+\begin{align}
+\pi_{\cC}(x) & = O\left(\varepsilon(x)^{\frac{d}{N} - 1}\int_{2}^{x}\frac{dx}{\log x}\right),  \ \ \ \text{as } x \to \infty, \text{ where we can take}\\
+\varepsilon(x) & = \begin{cases}\log x (\log \log x)^{-2} (\log \log \log x)^{-1}, & \text{for } x > 16 \text{ unconditionally,} \\
+ x^{1/2}(\log x)^{-2}, &  \text{ under GRH.} \end{cases}
+\end{align}
+The Chebotarev density theorem comes into the proof via the finite Galois groups $G_n$ and conjugacy classes $\cC_n$ involved in the definition of $\Gal(E/K)$ and $\cC$ as a projective limit. Later on, Serre improves these bounds, and proves another application -- that asymptotic formulas on the number of zeros of multiplicative functions (of ideals) along the primes can be used to give asymptotic formulas of the number of non-zero values along all ideals. Serre also uses these methods to prove upper bounds on the asymptotic number of coefficients of primes in modular forms equal to an arbitrary polynomial and to prove the surjectivity of $\bbZ_{\ell}$-valued representations of infinite Galois groups on the $\ell$-adic Tate module of an elliptic curve for $\ell$ exceeding some effectively computable bound. Similar results (with the base field equal to $\bbQ$) played an important role in Mazur's theorem giving the possible degrees of isogenies over $\bbQ$. These results are all well outside the scope of this report. Still, they clearly demonstrate that the Chebotarev density theorem is not just interesting in its own right, but also has a wealth of interesting and important consequences in number theory and arithmetic geometry.
+
+%\nocite{SilvermanAEC}
+%\nocite{SilvermanATAEC}
+%\nocite{CoxPrimes}
+%\nocite{LangEF}
+%\nocite{SutherlandLN}
+%\nocite{SutherlandIV}
+
+\appendix
+\section{Notation}
+
+\begin{itemize}
+\item Throughout this paper, $K$ refers to a number field with ring of integers $\cO_{K}$, absolute value of the discriminant $d_{K}$, and $n_{K} = [K:\bbQ]$ and similarly for $L$ and $E$. We try our best to reserve $\fkP$ for primes of $\cO_{L}$, $\fkq$ for primes of $E$, and $\fkp$ for primes of $K$. 
+\item $\norm \fkp$ without a subscript always refers to the absolute norm.
+\item $\chi_{0}$ is always the trivial character of the group in question.
+\item $\phi(n) = \# (\bbZ/n\bbZ)^{\times}$ is the totient function.
+\item $\zeta_{m}$ is a primitive $m$th root of unity (usually in $\overline{\bbQ}$).
+\item $\ord_{s = x}f(s)$ denotes the order of vanishing (negative at poles) of $f$ at the point $x$.
+\item $\residue_{\nu}f(s)$ denotes the residue of $f$ at $\nu$.
+\item The Dedekind zeta function is $\zeta_{L}(s) := \sum_{\fkP \subset \cO_{L}} (\norm \fkp)^{-s}$.
+\item $\artin{L/K}{\fkp}$ and $\artin{L/K}{\fkP}$ refer to the Artin symbol, defined in Definition \ref{def:ArtinSymbol}.
+\item $\delta_{\chi_{0}}(\chi) = \begin{cases} 1, & \chi = \chi_{0}, \\
+0, & \chi \neq \chi_{0}, \end{cases}$ denotes the indicator function of $\{\chi_{0}\}$.
+\item $n_{\chi}(t)$ denotes the number of zeros $\rho$ of $L_{L/E}(s,\chi)$ with $0 < \re(\rho) < 1$ and $|\im(\rho) - t| < 1$.
+\end{itemize}
+
+%We now give complete proofs of some results about the interaction between derivations, solvable ideals and nilpotent ideals. The results of this section are fairly standard and could probably be omitted, but I wasn't satisfied by the treatment they were given in my references, so they are included as an appendix.
+
+
+
+
+\bibliographystyle{alpha} %plain} %alpha
+\bibliography{TriantafillouANTFinalProject}
+
+
+\end{document}
+
+
+
+
+
+
